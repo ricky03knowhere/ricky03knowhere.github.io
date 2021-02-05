@@ -1,0 +1,113 @@
+@use 'variables' as var
+
+/*DESKTOP
+
+@media (min-width: 720px)
+
+  //NAVBAR
+  .navbar-brand
+    font-weight: 900 !important
+
+  .navbar-nav .nav-item
+    text-transform: uppercase
+    margin-left: 30px
+    font-weight: 900 !important
+
+    &.shad
+      color: #fff !important
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7)
+
+  .navbar-brand.shad
+    color: #fff !important
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7)
+
+  .navbar-nav .nav-link:hover::after
+    content: ""
+    display: block
+    border-bottom: 3px solid var.$primary-color
+    width: 100%
+    margin: auto
+    padding-bottom: 5px
+    margin-bottom: -8px
+
+
+  //CAROUSEL
+
+  .carousel.cap
+    height: 450px
+    top: -70px
+
+    img
+      height: auto
+      transform: none
+
+    .carousel-caption
+      top: 230px !important
+
+      h5
+        font-size: 3rem
+        font-weight: 200
+        margin-top: 0
+
+        span
+          font-weight: 500
+
+      p
+        font-size: 1.1rem
+
+
+  //ABOUT
+
+  #profile
+    width: 80vw
+    top: -50px
+    margin-bottom: 50px
+
+
+  //PROJECTS
+
+  #project
+    width: 34rem
+    height: 34rem
+
+    .card-img-top
+      height: 16rem
+      transform: scaleY(1.2)
+
+
+  //CONTACTS
+
+  #contact .message
+    margin-top: 0px
+
+
+  //HOBBIES
+
+  #interests .card
+    height: 120px
+
+    &.code
+      height: 120px
+
+    .card-text
+      width: 75%
+      text-align: left
+
+    > i
+      position: absolute
+      right: 30px
+
+    &.left
+      > i
+        right: 435px
+
+      .fa-itunes-note
+        right: 448px
+
+      .card-title
+        text-align: right
+
+      .card-text
+        width: 100%
+        position: relative
+        text-align: right

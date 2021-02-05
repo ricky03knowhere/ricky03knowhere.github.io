@@ -1,0 +1,478 @@
+/*:root {*/
+/*  color: #0797f0;*/
+/*}*/
+
+body {
+  height: 200vh;
+  font-family: 'Montserrat',sans-serif;
+}
+
+/*NAVBAR*/
+
+.navbar.nav {
+  background: #0797f0;
+  z-index: 999;
+}
+.navbar-brand {
+  font-family: Monospace;
+  font-weight: 900 !important;
+  font-size: 1.4rem;
+}
+.navbar-nav .nav-item {
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 900 !important;
+}
+.navbar-nav .nav-item.active {
+  color: #475cfd;
+  font-weight: bold;
+}
+.navbar-nav .nav-item.hover {
+  color: #475cfd;
+}
+.navbar-nav .nav-item .btn {
+  background: #0797f0;
+  border-radius: 50px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+}
+
+/*CAROUSEL*/
+
+.carousel.cap {
+  top: -230px;
+}
+.carousel.cap img {
+  height: 480px;
+  transform: scaleX(1.5);
+}
+.carousel.cap .carousel-caption {
+  top: 18em !important;
+}
+
+
+.carousel.cap .carousel-item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0));
+}
+.carousel.cap .carousel-caption {
+  text-shadow: 1px 1px 1px rgba(0,0,0,.7);
+}
+.carousel.cap .carousel-caption h5 {
+  font-size: 2.5rem;
+  font-weight: 300 !important;
+  margin-top: -40px;
+}
+.carousel.cap .carousel-caption h5 span {
+  font-weight: 500 !important;
+}
+
+
+.title {
+  font-weight: 400;
+  color: #555;
+  margin: 10px 0 20px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+
+/*PROFILE*/
+#profile {
+  border-radius: 25px;
+  position: relative;
+  top: -120px;
+  width: 95vw;
+  color: #999;
+  margin: auto;
+  box-shadow: 0 3px 20px rgba(0,0,0,.5);
+}
+#profile .about {
+  text-align: justify;
+}
+#profile .progress {
+  height: 5px;
+}
+
+#profile .col-md-5 h6 {
+  font-size: .8rem;
+}
+#profile .col-md-5 h6 i {
+  font-size: 1.2rem;
+}
+
+/*EDUCATION*/
+#education {
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.7);
+}
+
+#education .parralax {
+  background: url(../img/photo-1517694712202-14dd9538aa97.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px 0 100px;
+}
+
+#education img {
+  margin: 30px 0;
+  width: 200px;
+  filter: drop-shadow(-5px 5px 3px rgba(0,0,0,.5)) brightness(1.4);
+}
+
+#education .uin img {
+  transform: scale(1.15);
+  filter: drop-shadow(-5px 5px 3px rgba(0,0,0,.5)) brightness(1.1);
+
+}
+#education .title {
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+
+}
+#education h5 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#education span {
+  color: #ddd;
+}
+
+
+/*PROJECTS*/
+#projects {
+  background-color: #e8e8e8;
+  margin-top: -30px;
+  padding-bottom: 50px;
+}
+
+.carousel-indicators li.active {
+  background: #0797f0 !important;
+}
+
+.carousel-control-prev .fas, .carousel-control-next .fas {
+  color: #0797f0;
+}
+#project {
+  border-radius: 25px;
+  width: 15rem;
+  height: 18rem;
+  overflow: hidden;
+  box-shadow: 0 3px 20px rgba(0,0,0,.5);
+  margin: 50px auto 100px;
+}
+#project .card-img-top {
+  height: 6.2rem;
+  margin-top: 20px;
+  transform: scaleY(1.4);
+}
+#project .card-body {
+  z-index: 2;
+  bottom: 0;
+  position: absolute;
+  text-align: justify;
+}
+#project .card-title {
+  text-align: left;
+}
+#project .card-body .btn {
+  border-radius: 30px;
+  width: 90px;
+  margin-top: 10px;
+  background: #0797f0;
+}
+
+/*SOSMED*/
+#sosmed {
+  background: #0A3D62;
+  margin-top: -30px;
+  padding-bottom: 50px;
+}
+#sosmed .card {
+  height: 150px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #fff !important;
+  transform: scale(.9);
+  transition: transform .5s, border-radius .5s;
+}
+
+#sosmed .card .fab {
+  font-size: 3rem;
+  line-height: 150px;
+  color: #0A3D62;
+  transition: font-size .5s;
+}
+
+#sosmed .link {
+  text-decoration: none;
+}
+
+#sosmed .link:hover .card {
+  transform: scale(1.1);
+  border-radius: 50px;
+}
+
+#sosmed .link:hover .card .fab {
+  font-size: 4.5rem;
+}
+#sosmed .link i::before {
+  display: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  background-size: 200% 200%;
+  background-position: 75% 75%;
+  line-height: 150px;
+  transition: background .3s linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#sosmed .link:hover i::before {
+  background-position: 0% 0%;
+}
+
+#sosmed .fa-facebook-f::before {
+  background-image: linear-gradient(135deg,#0061DE 30%,#0a3d62 50%);
+}
+
+#sosmed .fa-youtube::before {
+  background-image: linear-gradient(135deg,#FF0404 30%,#0a3d62 50%);
+}
+#sosmed .fa-instagram::before {
+  background-image: linear-gradient(135deg,#C32AA3 30%,#0a3d62 50%);
+}
+#sosmed .fa-twitter::before {
+  background-image: linear-gradient(135deg,#1DA1F2 30%,#0a3d62 50%);
+}
+#sosmed .fa-linkedin-in::before {
+  background-image: linear-gradient(135deg,#007BB5 30%,#0a3d62 50%);
+}
+#sosmed .fa-github::before {
+  background-image: linear-gradient(135deg,#222 30%,#0a3d62 50%);
+}
+#sosmed .fa-telegram-plane::before {
+  background-image: linear-gradient(135deg,#00c3f4 30%,#0a3d62 50%);
+}
+#sosmed .fa-line::before {
+  background-image: linear-gradient(135deg,#28B43E 30%,#0a3d62 50%);
+}
+
+/*INTERESTS*/
+
+#interests .card {
+  height: 180px;
+  border-radius: 25px;
+  padding: 20px 18px;
+  color: white;
+  position: relative;
+  margin: 20px 5px;
+  background: #333;
+}
+#interests .card .card-title {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+#interests .card .card-text {
+  font-size: .6rem;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#interests .card.code {
+  height: 193px;
+}
+
+#interests .card > i {
+  margin: 3px auto 20px;
+  font-size: 3rem;
+  line-height: 58px;
+  color: #0797f0;
+}
+
+#interests .lang {
+  margin-top: 40px;
+}
+
+#interests .bg {
+  width: 100%;
+  margin: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#interests .bg img {
+  filter: hue(20deg);
+  width: 100%;
+}
+
+#interests .bg h2 {
+  font-weight: bold;
+  position: absolute;
+  line-height: 40px;
+  font-size: 1.3rem;
+  color: #efefef;
+  transform: rotate(-8deg);
+}
+
+
+/*CONTACT*/
+#contact {
+  background-color: #e8e8e8;
+}
+
+#contact .card {
+  border-radius: 25px;
+}
+
+#contact .info {
+  background: #0797f0;
+  color: white;
+  text-align: center;
+  margin-bottom: 32px !important;
+}
+
+#contact .location h3 i {
+  font-size: 3rem;
+  position: relative;
+  top: -6px;
+}
+#contact .message {
+  margin-top: 32px;
+}
+#contact .message .form-control {
+  border-radius: 30px;
+}
+#contact .message .btn {
+  background: #0797f0;
+  border-radius: 30px;
+  width: 90px;
+}
+
+/*FOOTER*/
+footer span a {
+  color: #0797f0;
+}
+
+/*DESKTOP*/
+
+@media (min-width: 720px) {
+  .navbar-brand {
+    font-weight: 900 !important;
+  }
+  .navbar-nav .nav-item {
+    text-transform: uppercase;
+    margin-left: 30px;
+    font-weight: 900 !important;
+  }
+  .navbar-nav .nav-item.shad,.navbar-brand.shad {
+    color: #fff !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.7);
+  }
+  .navbar-nav .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #0797f0;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+  .carousel.cap {
+    height: 450px;
+    top: -70px;
+  }
+  .carousel.cap img {
+    height: auto;
+    transform: none;
+  }
+  .carousel.cap .carousel-caption {
+    top: 230px !important;
+  }
+  .carousel.cap .carousel-caption h5 {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-top: 0;
+  }
+  .carousel.cap .carousel-caption h5 span {
+    font-weight: 500;
+  }
+
+  .carousel.cap .carousel-caption p {
+    font-size: 1.1rem;
+  }
+  #profile {
+    width: 80vw;
+    top: -50px;
+    margin-bottom: 50px;
+  }
+
+  #project {
+    width: 34rem;
+    height: 34rem;
+  }
+
+  #project .card-img-top {
+    height: 16rem;
+    transform: scaleY(1.2);
+  }
+
+  #contact .message {
+    margin-top: 0px;
+  }
+
+
+  #interests .card {
+    height: 120px;
+
+  }
+  #interests .card.code {
+    height: 120px;
+  }
+  #interests .card .card-text {
+    width: 75%;
+    text-align: left;
+  }
+
+  #interests .card > i {
+    position: absolute;
+    right: 30px;
+  }
+
+  #interests .card.left > i {
+    right: 435px;
+  }
+
+  #interests .card.left .fa-itunes-note {
+    right: 448px;
+  }
+  #interests .card.left .card-title {
+    text-align: right;
+  }
+
+  #interests .card.left .card-text {
+    width: 100%;
+    position: relative;
+    text-align: right;
+  }
+}
