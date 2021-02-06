@@ -180,7 +180,7 @@ body {
 
 /*SOCIALS */
 #sosmed {
-  background: #0A3D62;
+  background: #333;
   margin-top: -30px;
   padding-bottom: 50px;
 }
@@ -228,28 +228,31 @@ body {
   background-position: 0% 0%;
 }
 #sosmed .fa-facebook-f::before {
-  background-image: linear-gradient(135deg, #0061DE 30%, #0a3d62 50%);
-}
-#sosmed .fa-youtube::before {
-  background-image: linear-gradient(135deg, #FF0404 30%, #0a3d62 50%);
+  background-image: linear-gradient(135deg, #0061DE 30%, #333 50%);
 }
 #sosmed .fa-instagram::before {
-  background-image: linear-gradient(135deg, #C32AA3 30%, #0a3d62 50%);
+  background-image: linear-gradient(135deg, #C32AA3 30%, #333 50%);
 }
 #sosmed .fa-twitter::before {
-  background-image: linear-gradient(135deg, #1DA1F2 30%, #0a3d62 50%);
+  background-image: linear-gradient(135deg, #1DA1F2 30%, #333 50%);
 }
-#sosmed .fa-linkedin-in::before {
-  background-image: linear-gradient(135deg, #007BB5 30%, #0a3d62 50%);
+#sosmed .fa-youtube::before {
+  background-image: linear-gradient(135deg, #FF0404 30%, #333 50%);
 }
-#sosmed .fa-github::before {
-  background-image: linear-gradient(135deg, #222 30%, #0a3d62 50%);
+#sosmed .fa-whatsapp::before {
+  background-image: linear-gradient(135deg, #0061DE 30%, #333 50%);
 }
 #sosmed .fa-telegram-plane::before {
-  background-image: linear-gradient(135deg, #00c3f4 30%, #0a3d62 50%);
+  background-image: linear-gradient(135deg, #00c3f4 30%, #333 50%);
+}
+#sosmed .fa-linkedin-in::before {
+  background-image: linear-gradient(135deg, #007BB5 30%, #333 50%);
+}
+#sosmed .fa-github::before {
+  background-image: linear-gradient(135deg, #222 30%, #333 50%);
 }
 #sosmed .fa-line::before {
-  background-image: linear-gradient(135deg, #28B43E 30%, #0a3d62 50%);
+  background-image: linear-gradient(135deg, #28B43E 30%, #333 50%);
 }
 
 /*HOBBIES */
@@ -283,8 +286,9 @@ body {
   line-height: 58px;
   color: #0797f0;
 }
-#interests .lang {
-  margin-top: 40px;
+#interests .lang h3 {
+  margin-top: 90px;
+  margin-bottom: 80px !important;
 }
 #interests .bg {
   width: 100%;
@@ -441,6 +445,10 @@ footer span a {
     width: 100%;
     position: relative;
     text-align: right;
+  }
+
+  #interests .lang h3 {
+    margin-top: 7px;
   }
 }
 

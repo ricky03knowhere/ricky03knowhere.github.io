@@ -1,7 +1,11 @@
+$background-color : #333
+
+$socials: (facebook-f: #0061DE,instagram: #C32AA3,twitter: #1DA1F2,youtube: #FF0404,whatsapp: #0061DE,telegram-plane: #00c3f4,linkedin-in: #007BB5,github: #222,line: #28B43E)
+
 /*SOCIALS
 
 #sosmed
-  background: #0A3D62
+  background: $background-color
   margin-top: -30px
   padding-bottom: 50px
 
@@ -47,27 +51,7 @@
 
     &:hover i::before
       background-position: 0% 0%
-
-  .fa-facebook-f::before
-    background-image: linear-gradient(135deg, #0061DE 30%, #0a3d62 50%)
-
-  .fa-youtube::before
-    background-image: linear-gradient(135deg, #FF0404 30%, #0a3d62 50%)
-
-  .fa-instagram::before
-    background-image: linear-gradient(135deg, #C32AA3 30%, #0a3d62 50%)
-
-  .fa-twitter::before
-    background-image: linear-gradient(135deg, #1DA1F2 30%, #0a3d62 50%)
-
-  .fa-linkedin-in::before
-    background-image: linear-gradient(135deg, #007BB5 30%, #0a3d62 50%)
-
-  .fa-github::before
-    background-image: linear-gradient(135deg, #222 30%, #0a3d62 50%)
-
-  .fa-telegram-plane::before
-    background-image: linear-gradient(135deg, #00c3f4 30%, #0a3d62 50%)
-
-  .fa-line::before
-    background-image: linear-gradient(135deg, #28B43E 30%, #0a3d62 50%)
+  
+  @each $sosial, $color in $socials
+    .fa-#{$sosial}::before
+      background-image: linear-gradient(135deg, $color 30%, $background-color 50%)
