@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
 body {
   height: 200vh;
   font-family: "Montserrat", sans-serif;
@@ -67,11 +68,11 @@ body {
 }
 .carousel.cap .carousel-caption h5 {
   font-size: 2.5rem;
-  font-weight: 300 !important;
+  font-weight: 600;
   margin-top: -40px;
 }
 .carousel.cap .carousel-caption h5 span {
-  font-weight: 500 !important;
+  font-weight: 900;
 }
 
 /*ABOUT */
@@ -256,7 +257,7 @@ body {
 }
 
 /*HOBBIES */
-#interests .card {
+#hobbies .card {
   height: 180px;
   border-radius: 25px;
   padding: 20px 18px;
@@ -265,11 +266,11 @@ body {
   margin: 20px 5px;
   background: #333;
 }
-#interests .card .card-title {
+#hobbies .card .card-title {
   font-size: 1.1rem;
   font-weight: 900;
 }
-#interests .card .card-text {
+#hobbies .card .card-text {
   font-size: 0.6rem;
   font-weight: 400;
   width: 100%;
@@ -277,31 +278,31 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
-#interests .card.code {
+#hobbies .card.code {
   height: 193px;
 }
-#interests .card > i {
+#hobbies .card > i {
   margin: 3px auto 20px;
   font-size: 3rem;
   line-height: 58px;
   color: #0797f0;
 }
-#interests .lang h3 {
+#hobbies .lang h3 {
   margin-top: 90px;
   margin-bottom: 80px !important;
 }
-#interests .bg {
+#hobbies .bg {
   width: 100%;
   margin: 0 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#interests .bg img {
+#hobbies .bg img {
   filter: color(20deg);
   width: 100%;
 }
-#interests .bg h2 {
+#hobbies .bg h2 {
   font-weight: bold;
   position: absolute;
   line-height: 40px;
@@ -338,6 +339,177 @@ body {
   background: #0797f0;
   border-radius: 30px;
   width: 90px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#interests {
+  padding-bottom: 60px;
+}
+#interests .cont {
+  display: grid;
+  grid-template-areas: "a a b b c d" "e f f g h d" "i j j g k k" "i l l l k k";
+  gap: 14px;
+}
+@media (max-width: 720px) {
+  #interests .cont {
+    grid-template-areas: "a b" "c d" "e f" "g h" "i j" "k l";
+    padding: 0 10px;
+    gap: 15px;
+  }
+}
+#interests .cont .card {
+  display: grid;
+  background: transparent;
+  align-items: center;
+  min-height: 150px;
+  justify-items: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+#interests .cont .card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 8px;
+  width: 150%;
+  height: 150%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+  transform: scale(0.8);
+  transition: all 0.8s ease-in;
+}
+#interests .cont .card.item-1::before {
+  background-image: url(../img/interests/tech.jpg);
+}
+#interests .cont .card.item-2::before {
+  background-image: url(../img/interests/phi.jpg);
+}
+#interests .cont .card.item-3::before {
+  background-image: url(../img/interests/psy.jpg);
+}
+#interests .cont .card.item-4::before {
+  background-image: url(../img/interests/anm.jpg);
+}
+#interests .cont .card.item-5::before {
+  background-image: url(../img/interests/his.jpg);
+}
+#interests .cont .card.item-6::before {
+  background-image: url(../img/interests/isl.jpg);
+}
+#interests .cont .card.item-7::before {
+  background-image: url(../img/interests/cons.jpg);
+}
+#interests .cont .card.item-8::before {
+  background-image: url(../img/interests/phy.jpg);
+}
+#interests .cont .card.item-9::before {
+  background-image: url(../img/interests/mov.jpg);
+}
+#interests .cont .card.item-10::before {
+  background-image: url(../img/interests/astro.jpg);
+}
+#interests .cont .card.item-11::before {
+  background-image: url(../img/interests/prog.jpg);
+}
+#interests .cont .card.item-12::before {
+  background-image: url(../img/interests/alq.jpg);
+}
+#interests .cont .card.item-3::before, #interests .cont .card.item-5::before {
+  transform: scale(0.67);
+}
+#interests .cont .card:hover::before {
+  transform: rotate(30deg) scale(1.3);
+  filter: grayscale(0);
+}
+#interests .cont .card.item-12:hover::before {
+  transform: rotate(30deg) scale(1.6);
+}
+#interests .cont .card:hover h5 {
+  font-size: 0.6rem;
+  opacity: 0.5;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 720px) {
+  #interests .cont .card {
+    height: 180px;
+    min-width: 120px;
+  }
+  #interests .cont .card.item-11 h5 {
+    font-size: 0.6rem;
+  }
+  #interests .cont .card.item-12::before {
+    background-position: -140px 45px;
+    transform: scale(1);
+  }
+  #interests .cont .card:hover h5 {
+    padding-top: 100%;
+    font-size: 0.6rem;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.5);
+  }
+}
+#interests .cont .card.item-1 {
+  grid-area: a;
+}
+#interests .cont .card.item-2 {
+  grid-area: b;
+}
+#interests .cont .card.item-3 {
+  grid-area: c;
+}
+#interests .cont .card.item-4 {
+  grid-area: d;
+}
+#interests .cont .card.item-5 {
+  grid-area: e;
+}
+#interests .cont .card.item-6 {
+  grid-area: f;
+}
+#interests .cont .card.item-7 {
+  grid-area: g;
+}
+#interests .cont .card.item-8 {
+  grid-area: h;
+}
+#interests .cont .card.item-9 {
+  grid-area: i;
+}
+#interests .cont .card.item-10 {
+  grid-area: j;
+}
+#interests .cont .card.item-11 {
+  grid-area: k;
+}
+#interests .cont .card.item-12 {
+  grid-area: l;
+}
+#interests .cont .card h5 {
+  font-size: 0.9rem;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: white;
+  line-height: 20px;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 5px black;
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.7);
+  transition: all 0.8s;
+  transform: translateY(0.45rem);
+}
+@media (max-width: 720px) {
+  #interests .cont .card h5 {
+    font-size: 0.7rem;
+  }
 }
 
 /*FOOTER */
@@ -418,36 +590,36 @@ footer span a {
     margin-top: 0px;
   }
 
-  #interests .card {
+  #hobbies .card {
     height: 120px;
   }
-  #interests .card.code {
+  #hobbies .card.code {
     height: 120px;
   }
-  #interests .card .card-text {
+  #hobbies .card .card-text {
     width: 75%;
     text-align: left;
   }
-  #interests .card > i {
+  #hobbies .card > i {
     position: absolute;
     right: 30px;
   }
-  #interests .card.left > i {
+  #hobbies .card.left > i {
     right: 435px;
   }
-  #interests .card.left .fa-itunes-note {
+  #hobbies .card.left .fa-itunes-note {
     right: 448px;
   }
-  #interests .card.left .card-title {
+  #hobbies .card.left .card-title {
     text-align: right;
   }
-  #interests .card.left .card-text {
+  #hobbies .card.left .card-text {
     width: 100%;
     position: relative;
     text-align: right;
   }
 
-  #interests .lang h3 {
+  #hobbies .lang h3 {
     margin-top: 7px;
   }
 }

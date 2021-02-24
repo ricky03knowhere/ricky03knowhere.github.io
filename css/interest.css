@@ -1,0 +1,167 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#interests .cont {
+  display: grid;
+  grid-template-areas: "a a b b c d" "e f f g h d" "i j j g k k" "i l l l k k";
+  gap: 14px;
+  padding: 0 25px;
+}
+@media (max-width: 720px) {
+  #interests .cont {
+    grid-template-areas: "a b" "c d" "e f" "g h" "i j" "k l";
+    padding: 0 10px;
+    gap: 12px;
+  }
+}
+#interests .cont .card {
+  display: grid;
+  background: transparent;
+  align-items: center;
+  min-height: 150px;
+  justify-items: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+#interests .cont .card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 8px;
+  width: 150%;
+  height: 150%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+  transform: scale(0.8);
+  transition: all 0.8s ease-in;
+}
+#interests .cont .card.item-1::before {
+  background-image: url(../img/interests/tech.jpg);
+}
+#interests .cont .card.item-2::before {
+  background-image: url(../img/interests/phi.jpg);
+}
+#interests .cont .card.item-3::before {
+  background-image: url(../img/interests/psy.jpg);
+}
+#interests .cont .card.item-4::before {
+  background-image: url(../img/interests/anm.jpg);
+}
+#interests .cont .card.item-5::before {
+  background-image: url(../img/interests/his.jpg);
+}
+#interests .cont .card.item-6::before {
+  background-image: url(../img/interests/isl.jpg);
+}
+#interests .cont .card.item-7::before {
+  background-image: url(../img/interests/cons.jpg);
+}
+#interests .cont .card.item-8::before {
+  background-image: url(../img/interests/phy.jpg);
+}
+#interests .cont .card.item-9::before {
+  background-image: url(../img/interests/mov.jpg);
+}
+#interests .cont .card.item-10::before {
+  background-image: url(../img/interests/astro.jpg);
+}
+#interests .cont .card.item-11::before {
+  background-image: url(../img/interests/prog.jpg);
+}
+#interests .cont .card.item-12::before {
+  background-image: url(../img/interests/alq.jpg);
+}
+#interests .cont .card.item-3::before, #interests .cont .card.item-5::before {
+  transform: scale(0.67);
+}
+#interests .cont .card:hover::before {
+  transform: rotate(30deg) scale(1.3);
+  filter: grayscale(0);
+}
+#interests .cont .card.item-12:hover::before {
+  transform: rotate(30deg) scale(1.6);
+}
+#interests .cont .card:hover h5 {
+  font-size: 0.6rem;
+  opacity: 0.5;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 720px) {
+  #interests .cont .card {
+    height: 190px;
+    min-width: 140px;
+  }
+  #interests .cont .card.item-12::before {
+    background-position: -140px 45px;
+    transform: scale(1);
+  }
+  #interests .cont .card:hover h5 {
+    padding-top: 100%;
+    font-size: 0.6rem;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.5);
+  }
+}
+#interests .cont .card.item-1 {
+  grid-area: a;
+}
+#interests .cont .card.item-2 {
+  grid-area: b;
+}
+#interests .cont .card.item-3 {
+  grid-area: c;
+}
+#interests .cont .card.item-4 {
+  grid-area: d;
+}
+#interests .cont .card.item-5 {
+  grid-area: e;
+}
+#interests .cont .card.item-6 {
+  grid-area: f;
+}
+#interests .cont .card.item-7 {
+  grid-area: g;
+}
+#interests .cont .card.item-8 {
+  grid-area: h;
+}
+#interests .cont .card.item-9 {
+  grid-area: i;
+}
+#interests .cont .card.item-10 {
+  grid-area: j;
+}
+#interests .cont .card.item-11 {
+  grid-area: k;
+}
+#interests .cont .card.item-12 {
+  grid-area: l;
+}
+#interests .cont .card h5 {
+  font-size: 0.9rem;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: white;
+  line-height: 20px;
+  letter-spacing: 4px;
+  text-shadow: 0px 0px 5px black;
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.7);
+  transition: all 0.8s;
+  transform: translateY(0.45rem);
+}
+@media (max-width: 720px) {
+  #interests .cont .card h5 {
+    font-size: 0.7rem;
+  }
+}
+
+/*# sourceMappingURL=interest.css.map */

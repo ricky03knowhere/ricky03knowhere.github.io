@@ -1,0 +1,108 @@
+body
+  font-family: 'Montserrat',sans-serif
+
+
+$items: (1:a, 2:b, 3:c, 4:d, 5:e, 6:f, 7:g, 8:h, 9:i, 10:j, 11:k, 12:l)
+$interests: (1:tech, 2:phi, 3:psy, 4:anm, 5:his, 6:isl, 7:cons, 8:phy, 9:mov, 10:astro, 11:prog, 12:alq)
+ 
+#interests
+  padding-bottom: 60px
+  
+  .cont
+    display: grid
+    grid-template-areas: 'a a b b c d' 'e f f g h d' 'i j j g k k' 'i l l l k k'
+    gap: 14px
+
+    
+    @media (max-width: 720px)
+      grid-template-areas: 'a b' 'c d' 'e f' 'g h' 'i j' 'k l'
+      padding: 0 10px
+      gap: 15px
+      
+    .card 
+      display: grid
+      background: transparent
+      align-items: center
+      min-height: 150px
+      justify-items: center
+      border: none
+      border-radius: 8px
+      box-shadow: 2px 2px 4px rgba(black, .7)
+      overflow: hidden
+
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        border-radius: 8px
+        width: 150%
+        height: 150%
+        background-position: center
+        background-size: cover
+        filter: grayscale(1)
+        transform: scale(.8)
+        transition: all .8s ease-in
+      
+      @each $i, $x in $interests
+        &.item-#{$i}::before
+          background-image: url(../img/interests/#{$x}.jpg)
+      
+      &.item-3::before, &.item-5::before
+        transform: scale(.67)
+      
+      &:hover::before
+        transform: rotate(30deg) scale(1.3)
+        filter: grayscale(0)
+    
+      &.item-12:hover::before
+        transform: rotate(30deg) scale(1.6)
+        
+    
+      &:hover h5
+        font-size: .6rem
+        opacity: .5
+        text-shadow: 0px 0px 5px rgba(black, 0)
+        -webkit-text-stroke: .8px rgba(black, 0.5)
+
+        
+      @media (max-width: 720px)
+        height: 180px
+        min-width: 120px
+        
+        &.item-11 h5
+          font-size: .6rem
+          
+        &.item-12::before
+          background-position: -140px 45px
+          transform: scale(1)
+          
+        &:hover h5
+          padding-top: 100%
+          font-size: .6rem
+          text-shadow: 0px 0px 5px rgba(black, 0)
+          -webkit-text-stroke: .8px rgba(black, 0.5)
+
+      
+
+      @each $item, $area in $items
+        &.item-#{$item}
+          grid-area: $area
+          
+      h5
+        font-size: .9rem
+        position: absolute
+        z-index: 2
+        text-align: center
+        text-transform: capitalize
+        font-weight: 900
+        color: white
+        line-height: 20px
+        letter-spacing: 4px
+        text-shadow: 0px 0px 5px black
+        -webkit-text-stroke: .8px rgba(black, .7)
+        transition: all .8s
+        transform: translateY(.45rem)
+      
+        @media (max-width: 720px)
+          font-size: .7rem
+    
