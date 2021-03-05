@@ -4,7 +4,8 @@
 
 .navbar.nav
   background: var.$primary-color
-  z-index: 999
+  z-index: 999 !important
+  box-shadow: 0px 5px 20px rgba(black, .45)
 
 .navbar-brand
   font-family: Monospace
@@ -24,8 +25,14 @@
     color: #475cfd
 
   .btn
-    background: var.$primary-color
+    font-weight: bolder
+    background: #0797f0
     border-radius: 50px
-    font-size: .8rem
-    text-transform: uppercase
+    text-shadow: none
+    font-size: .75rem
+    width: 7rem
     border: 1px solid #ffffff
+    
+    @media (max-width: 720px)
+      margin: 1rem auto
+      width: 100%
