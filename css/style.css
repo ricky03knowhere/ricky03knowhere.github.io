@@ -55,6 +55,11 @@ body {
 .carousel.cap {
   top: -230px;
 }
+.carousel.cap.carousel-fade .carousel-item {
+  opacity: 1;
+  transition-duration: 4.5s;
+  transition-property: opacity;
+}
 .carousel.cap img {
   height: 480px;
   transform: scaleX(1.5);
