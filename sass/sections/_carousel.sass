@@ -1,7 +1,7 @@
 /*CAROUSEL
 
 .carousel.cap
-  top: -230px
+  top: -233px
 
   &.carousel-fade .carousel-item
     opacity: 1
@@ -16,22 +16,31 @@
   .carousel-caption
     top: 18em !important
 
+  .carousel-item
+    z-index: 2
+
   .carousel-item::after
     content: ''
     display: block
     position: absolute
-    height: 90%
+    height: 80%
     width: 100%
     bottom: 0
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
-
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))  
+  
   .carousel-caption
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7)
 
     h5
+      position: relative
       font-size: 2.5rem
       font-weight: 600
       margin-top: -40px
+      z-index: 999
 
       span
         font-weight: 900
+    
+    p
+      position: relative
+      z-index: 999

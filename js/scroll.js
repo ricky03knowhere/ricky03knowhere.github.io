@@ -16,18 +16,18 @@ $(document).ready(function() {
 
 })
 
-$(".scroll").on("click", function(e) {
-  // e.preventDefault()
-  const link = $(this).attr("href")
-  const dest = $(link).offset().top - 100
+// $(".scroll").on("click", function(e) {
+//   // e.preventDefault()
+//   const link = $(this).attr("href")
+//   const dest = $(link).offset().top - 100
 
-  $("#page-top").animate({
-    scrollTop: dest
-  },
-    1250)
-  e.preventDefault
+//   $("#page-top").animate({
+//     scrollTop: dest
+//   },
+//     1250)
+//   e.preventDefault
 
-})
+// })
 
 
 let date = new Date()

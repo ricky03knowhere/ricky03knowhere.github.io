@@ -7,15 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Google Adds -->
+  <script data-ad-client="ca-pub-6605163889501185" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" type="text/css" media="all" />
+
+  <!-- AOS JS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="img/20201201_135234.png" type="image/x-icon" />
   <title>My Profile</title>
 </head>
@@ -24,16 +39,16 @@
 
   <!--NAVBAR START-->
 
-  <nav class="navbar sticky-top navbar-expand-md navbar-dark shadow">
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark">
     <div class="container">
       <a class="navbar-brand shad" href="#profile">{ricky03knowhere}</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item shad">
             <a class="nav-link scroll" href="#education">Education</a>
           </li>
@@ -42,6 +57,9 @@
           </li>
           <li class="nav-item shad">
             <a class="nav-link scroll" href="#certificates">Certificates</a>
+          </li>
+          <li class="nav-item shad">
+            <a class="nav-link scroll" href="#sosmed">Socials</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn scroll" href="#contact">Contact</a>
@@ -56,7 +74,7 @@
 
   <!--CAROUSEL START-->
 
-  <div id="carouselExampleFade" class="carousel cap slide carousel-fade b-5" data-ride="carousel">
+  <div id="carouselExampleFade" class="carousel cap slide carousel-fade b-5" data-bs-ride="carousel">
 
     <div class="carousel-inner">
       <div class="carousel-item active item-1">
@@ -104,55 +122,48 @@
       </div>
     </div>
 
-    <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-      <i class="fas fa-chevron-left fa-2x"></i>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-      <i class="fas fa-chevron-right fa-2x"></i>
-    </a> -->
-
   </div>
 
   <!--CAROUSEL END-->
 
   <!--ABOUT START-->
 
-  <div class="row p-4 bg-white justify-content-around" id="profile">
-    <div class="col-md-6 mb-5 pt-4 about">
+  <div class="row p-4 bg-white justify-content-around" id="profile" style="z-index: 99">
+    <div class="col-md-6 mb-5 pt-4">
       <h3 class="title">About Me</h3>
-      <p>
+      <p class="about">
         An informatics engineering student who masters several programming languages,
         always follows technological developments, especially web programming,
-        and has made several web projects that have been uploaded to <a
-          href="https://github.com/ricky03knowhere">github.com</a>
+        and has made several web projects that have been uploaded to <a href="https://github.com/ricky03knowhere"
+          target="_blank">github.com</a>
       </p>
     </div>
 
     <div class="col-md-5 pb-4">
-      <h3 class="title">Skills</h3>
-      <h6><i class="fab fa-html5 mr-2"></i>HTML <i class="mx-2">/</i> <i class="fab fa-css3-alt mr-2"></i>CSS</h6>
+      <h3 class="title mt-4">Skills</h3>
+      <h6><i class="fab fa-html5 me-2"></i>HTML <i class="mx-2">/</i> <i class="fab fa-css3-alt me-2"></i>CSS</h6>
       <div class="progress mb-3">
         <div class="progress-bar bg-danger" role="progressbar" style="width: 88%" aria-valuemin="0" aria-valuemax="100">
         </div>
       </div>
 
-      <h6><i class="fab fa-js mr-2"></i>JavaScript</h6>
+      <h6 class="title-2"><i class="fab fa-js me-2"></i>JavaScript</h6>
       <div class="progress mb-3">
         <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuemin="0"
           aria-valuemax="100"></div>
       </div>
 
-      <h6><i class="fab fa-php mr-2"></i>PHP</h6>
+      <h6 class="title-3"><i class="fab fa-php me-2"></i>PHP</h6>
       <div class="progress mb-3">
         <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuemin="0" aria-valuemax="100">
         </div>
       </div>
-      <h6><i class="fab fa-node-js mr-2"></i>Express.js</h6>
+      <h6 class="title-4"><i class="fab fa-node-js me-2"></i>Express.js</h6>
       <div class="progress mb-3">
         <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuemin="0"
           aria-valuemax="100"></div>
       </div>
-      <h6><i class="fab fa-react mr-2"></i>React.js</h6>
+      <h6 class="title-5"><i class="fab fa-react me-2"></i>React.js</h6>
       <div class="progress mb-3">
         <div class="progress-bar bg-primary" role="progressbar" style="width: 5%" aria-valuemin="0" aria-valuemax="100">
         </div>
@@ -160,6 +171,7 @@
     </div>
 
   </div>
+  <!--ABOUT END-->
 
 
   <!--EDUCATION START-->
@@ -171,24 +183,30 @@
           d="M0,224L48,218.7C96,213,192,203,288,170.7C384,139,480,85,576,90.7C672,96,768,160,864,176C960,192,1056,160,1152,133.3C1248,107,1344,85,1392,74.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
         </path>
       </svg>
-      <!--ABOUT END-->
-      <h3 class="title mb-5 mt-3">Education</h3>
-      <div class="row">
-        <div class="col-md-6 mb-5">
-          <a href="http://sekolah.data.kemdikbud.go.id/index.php/chome/profil/B5F296A2-08FE-4CF8-B99C-0737CFC6B092">
-            <img src="img/1602551267992.png" alt="">
-          </a>
-          <h5>SMKS Al-ghifari Banyuresmi</h5>
-          <span>{ Software Engineering }</span>
-        </div>
-        <div class="col-md-6 uin">
-          <a href="https://uinsgd.ac.id/">
-            <img src="img/logo.png" alt="uin_sgd">
-          </a>
-          <h5>UIN sunan gunung djati bandung</h5>
-          <span>{ Informatics Engeenering }</span>
+      <div style="background-color: #0007;">
+
+        <h3 class="title mb-5 mt-3" style="filter: blur(0px)">Education</h3>
+        <div class="row mb-5">
+          <div class="col-md-6 mb-5">
+            <a href="http://sekolah.data.kemdikbud.go.id/index.php/chome/profil/B5F296A2-08FE-4CF8-B99C-0737CFC6B092"
+              target="_blank">
+              <img src="img/1602551267992.png" alt="agif" data-aos="flip-left" data-aos-delay="200"
+                data-aos-duration="1000">
+            </a>
+            <h5 data-aos="flip-up" data-aos-delay="800" data-aos-duration="1000">SMKS Al-ghifari Banyuresmi</h5>
+            <span data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">{ Software Engineering }</span>
+          </div>
+          <div class="col-md-6">
+            <a href="https://uinsgd.ac.id/" target="_blank">
+              <img src="img/logo.png" alt="uin_sgd" class="uin" data-aos="flip-left" data-aos-delay="800"
+                data-aos-duration="1000">
+            </a>
+            <h5 data-aos="flip-up" data-aos-delay="800" data-aos-duration="1000">UIN sunan gunung djati bandung</h5>
+            <span data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">{ Informatics Engeenering }</span>
+          </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#e8e8e8" fill-opacity="1"
           d="M0,256L48,218.7C96,181,192,107,288,80C384,53,480,75,576,90.7C672,107,768,117,864,122.7C960,128,1056,128,1152,106.7C1248,85,1344,43,1392,21.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -202,12 +220,15 @@
   <!--  PROJECTS START-->
   <div id="projects">
     <h3 class="title text-center my-4 pt-5">Projects</h3>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card" id="project">
@@ -219,7 +240,7 @@
                 Dibuat menggunakan konsep MVC dalam Codeigniter dan template Cooladmin yang
                 berdasarkan soal UJIKOM RPL 2020.
               </p>
-              <a href="https://ricky03knowhere.github.io/people_report" class="btn btn-primary">View</a>
+              <a href="https://ricky03knowhere.github.io/people_report" target="_blank" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>
@@ -233,7 +254,7 @@
                 dengan menerapkan konsep CRUEDS dalam PHP & MySQL.
                 Dibuat menggunakan Adobe Dreamweaver dan Template SB Admin.
               </p>
-              <a href="https://ricky03knowhere.github.io/spp_payment" class="btn btn-primary">View</a>
+              <a href="https://ricky03knowhere.github.io/spp_payment" target="_blank" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>
@@ -247,15 +268,15 @@
                 Berfungsi untuk mencari lirik lagu berdasarkan judul, nama artis, dan genre.
                 Dibuat dengan JQuery dan template Argon Dashboard Master.
               </p>
-              <a href="https://ricky03knowhere.github.io/song_lyrics" class="btn btn-primary">View</a>
+              <a href="https://ricky03knowhere.github.io/song_lyrics" target="_blank" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
         <i class="fas fa-chevron-left fa-2x"></i>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
         <i class="fas fa-chevron-right fa-2x"></i>
       </a>
 
@@ -331,14 +352,14 @@
     <div class="row m-3 pt-5 justify-content-center">
 
       <div class="col-md-3">
-        <a class="link" href="https://www.linkedin.com/mwlite/in/ricky-muhammad-ridwan-4545001a5">
+        <a class="link" href="https://www.linkedin.com/mwlite/in/ricky-muhammad-ridwan-4545001a5" target="_blank">
           <div class="card bg-primary">
             <i class="fab fa-linkedin-in"></i>
           </div>
         </a>
       </div>
       <div class="col-md-5">
-        <a class="link" href="https://github.com/ricky03knowhere">
+        <a class="link" href="https://github.com/ricky03knowhere" target="_blank">
           <div class="card bg-success">
             <i class="fab fa-github"></i>
           </div>
@@ -346,14 +367,14 @@
       </div>
 
       <div class="col-md-2">
-        <a href="#!" class="link">
+        <a href="https://twitter.com/rickyackerman2" target="_blank" class="link">
           <div class="card bg-success">
             <i class="fab fa-twitter"></i>
           </div>
         </a>
       </div>
       <div class="col-md-2">
-        <a href="https://youtube.com/channel/UCLQLvCI-WM-iQExTp9kdG4Q" class="link">
+        <a href="https://www.youtube.com/channel/UCpHeppo68MtAyVDXjQ_YGbw/" target="_blank" class="link">
           <div class="card bg-success">
             <i class="fab fa-youtube"></i>
           </div>
@@ -363,29 +384,29 @@
     </div>
     <div class="row m-3 justify-content-around">
       <div class="col-md-2">
-        <a href="https://t.me/ricky33tiedemann" class="link">
+        <a href="https://t.me/ricky33tiedemann" target="_blank" class="link">
           <div class="card bg-success">
             <i class="fab fa-telegram-plane"></i>
           </div>
         </a>
       </div>
       <div class="col-md-2">
-        <a href="https://facebook.com/edricky.infinitystones" class="link">
+        <a href="https://facebook.com/edricky.infinitystones" target="_blank" class="link">
           <div class="card bg-success">
             <i class="fab fa-facebook-f"></i>
           </div>
         </a>
       </div>
       <div class="col-md-3">
-        <a href="#!" class="link">
+        <a href="https://know7english.blogspot.com/" target="_blank" class="link">
           <div class="card bg-success">
-            <i class="fab fa-line"></i>
+            <i class="fab fa-blogger-b"></i>
           </div>
         </a>
       </div>
 
       <div class="col-md-5">
-        <a href="https://www.instagram.com/ricky_tiedemann/" class="link">
+        <a href="https://www.instagram.com/ricky_tiedemann/" target="_blank" class="link">
           <div class="card bg-success">
             <i class="fab fa-instagram"></i>
           </div>
@@ -404,7 +425,7 @@
   <div id="hobbies">
     <div class="row m-3 pt-4">
       <div class="col-md-7">
-        <h3 class="title ml-2 mb-5">Hobbies</h3>
+        <h3 class="title ms-2 mb-5">Hobbies</h3>
         <div class="card right code">
           <h3 class="card-title">Coding</h3>
           <i class="fas fa-laptop-code"></i>
@@ -436,7 +457,7 @@
         </div>
       </div>
       <div class="col-md-5 mb-3 lang">
-        <h3 class="title ml-4 mb-5">Languages</h3>
+        <h3 class="title ms-4 mb-5">Languages</h3>
         <div class="bg pt-1">
           <img src="img/SeekPng.com_paint-png_34390.png" alt="pap">
           <h2>Sundanese</h2>
@@ -524,17 +545,17 @@
           <i class="fas fa-envelope fa-3x mb-1"></i>
           <h3 class="mb-4">Contact Me</h3>
           <p>
-            <i class="fab fa-whatsapp mr-2 font-weight-bold"></i>Whatsapp : 085861874609
+            <i class="fab fa-whatsapp me-2 font-weight-bold"></i>Whatsapp : 085861874609
           </p>
           <p>
-            <i class="fas fa-at mr-2"></i>E-mail : ricky03senju@gmail.com
+            <i class="fas fa-at me-2"></i>E-mail : ricky03senju@gmail.com
           </p>
         </div>
 
         <div class="card location pt-3 pb-4 mt-1">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <h3><i class="fas fa-map-marker-alt mr-2 ml-1"></i>Address</h3>
+              <h3><i class="fas fa-map-marker-alt me-2 ms-1"></i>Address</h3>
             </li>
             <li class="list-group-item py-3">Kp.Ciduga RT 02 RW 09</li>
             <li class="list-group-item py-3">Ds.Margahayu, Kec.Leuwigoong</li>
@@ -584,7 +605,8 @@
   <footer class="sticky-footer py-5">
     <div class="container my-auto text-center">
       <span class="text-white">Copyright &copy; <a href="https://github.com/ricky03knowhere"
-          class="text-white font-weight-bold">ricky03knowhere</a> <span id="year"></span></span>
+          class="text-white font-weight-bold text-decoration-none" target="_blank">ricky03knowhere</a> <span
+          id="year"></span></span>
     </div>
   </footer>
   <!-- End of Footer -->
@@ -592,24 +614,23 @@
 
 
   <!--SCRIPTS START-->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/TextPlugin.min.js"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script type="text/javascript" src="js/animate.js" charset="utf-8"></script>
 
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="js/jquery.hislide.js" charset="utf-8"></script>
 
   <script type="text/javascript" src="js/certificates.js" charset="utf-8"></script>
   <script type="text/javascript" src="js/scroll.js" charset="utf-8"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
 
 
   <!--SCRIPTS END-->

@@ -21,6 +21,7 @@ body {
   font-family: Monospace;
   font-weight: 900 !important;
   font-size: 1.4rem;
+  letter-spacing: 1.5px;
 }
 
 .navbar-nav .nav-item {
@@ -53,7 +54,7 @@ body {
 
 /*CAROUSEL */
 .carousel.cap {
-  top: -230px;
+  top: -233px;
 }
 .carousel.cap.carousel-fade .carousel-item {
   opacity: 1;
@@ -67,11 +68,14 @@ body {
 .carousel.cap .carousel-caption {
   top: 18em !important;
 }
+.carousel.cap .carousel-item {
+  z-index: 2;
+}
 .carousel.cap .carousel-item::after {
   content: "";
   display: block;
   position: absolute;
-  height: 90%;
+  height: 80%;
   width: 100%;
   bottom: 0;
   background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0));
@@ -80,12 +84,18 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 .carousel.cap .carousel-caption h5 {
+  position: relative;
   font-size: 2.5rem;
   font-weight: 600;
   margin-top: -40px;
+  z-index: 999;
 }
 .carousel.cap .carousel-caption h5 span {
   font-weight: 900;
+}
+.carousel.cap .carousel-caption p {
+  position: relative;
+  z-index: 999;
 }
 
 /*ABOUT */
@@ -133,8 +143,9 @@ body {
   width: 200px;
   filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5)) brightness(1.4);
 }
-#education .uin img {
-  transform: scale(1.15);
+#education .uin {
+  margin: 23px 0;
+  width: 228px;
   filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5)) brightness(1.1);
 }
 #education .title {
@@ -146,6 +157,8 @@ body {
   text-transform: uppercase;
 }
 #education span {
+  position: relative;
+  display: inline-block;
   color: #ddd;
 }
 
@@ -505,8 +518,8 @@ body {
 #sosmed .fa-github::before {
   background-image: linear-gradient(135deg, #222 30%, #333 50%);
 }
-#sosmed .fa-line::before {
-  background-image: linear-gradient(135deg, #28B43E 30%, #333 50%);
+#sosmed .fa-blogger-b::before {
+  background-image: linear-gradient(135deg, #f57c00 30%, #333 50%);
 }
 
 /*HOBBIES */
