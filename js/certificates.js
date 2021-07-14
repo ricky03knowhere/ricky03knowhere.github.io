@@ -1,11 +1,12 @@
 $('#certificates .slides').hiSlide();
 
+// <<--- Change Picture function --->>
 function pictChange(i) {
-  let title = $('#certificates .contain .item-'+i).data('title')
-  let year = $('#certificates .contain .item-'+i).data('year')
+  let title = $('#certificates .contain .item-' + i).data('title')
+  let year = $('#certificates .contain .item-' + i).data('year')
 
   $('#certificates .preview .card').css({
-    "background-image": "url(img/certificates/"+i+".png)"
+    "background-image": "url(img/certificates/" + i + ".png)"
   })
 
   $('#certificates .preview h3 ,#certificates .preview .year').toggleClass('emerge')
@@ -27,7 +28,7 @@ function pictChange(i) {
 }
 
 
-
+// <<--- Sertificate clicked handler --->>
 $('#certificates .contain .card').click((e) => {
   $('#certificates .preview').toggleClass('view')
 
@@ -57,6 +58,7 @@ $('#certificates .contain .card').click((e) => {
 })
 
 
+// <<--- close Picture handler --->>
 $('#certificates .close').click(() => {
   $('#certificates .preview').toggleClass('view')
 

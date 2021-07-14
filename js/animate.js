@@ -47,7 +47,7 @@ titles.forEach((title, i) => {
 
 
 
-// <<---- ABOUT --->
+// <<--- ABOUT --->
 
 const about = document.querySelector('.about')
 
@@ -57,7 +57,7 @@ about.dataset.aosDuration = 1000
 
 
 
-// <<---- SKILLS --->
+// <<--- SKILLS --->
 
 const skillTitles = document.querySelectorAll('#profile h6')
 

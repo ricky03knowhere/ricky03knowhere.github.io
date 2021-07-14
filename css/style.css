@@ -45,6 +45,14 @@ body {
   width: 7rem;
   border: 1px solid #ffffff;
 }
+.navbar-nav .nav-item .btn:hover {
+  height: 3em;
+  border-width: 1.7px;
+}
+.navbar-nav .nav-item .btn.active {
+  height: 3em;
+  border-width: 1.9px;
+}
 @media (max-width: 720px) {
   .navbar-nav .nav-item .btn {
     margin: 1rem auto;
@@ -54,7 +62,7 @@ body {
 
 /*CAROUSEL */
 .carousel.cap {
-  top: -233px;
+  top: -16.7em;
 }
 .carousel.cap.carousel-fade .carousel-item {
   opacity: 1;
@@ -137,6 +145,24 @@ body {
   height: 100%;
   overflow: hidden;
   padding: 0 0 100px;
+}
+#education .parralax .cont {
+  padding: 13em 0 14em;
+  background-color: #0008;
+  margin-top: -15em;
+}
+@media (max-width: 720px) {
+  #education .parralax .cont {
+    margin-top: -6em;
+  }
+}
+#education .parralax .edu-wave {
+  margin-top: -15em;
+}
+@media (max-width: 720px) {
+  #education .parralax .edu-wave {
+    margin-bottom: -10em;
+  }
 }
 #education img {
   margin: 30px 0;
