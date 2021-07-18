@@ -68,15 +68,13 @@ skillTitles.forEach((skill, i) => {
 });
 
 
+// <<---  PROJECT --->
 
-const progressBars = document.querySelectorAll('.progress-bar')
+const project = document.querySelector('#projects .carousel-inner')
 
-progressBars.forEach((progressBar, i) => {
-  
-  progressBar.dataset.aos = 'fade-right'
-  progressBar.dataset.aosDelay = i * 600
-  progressBar.dataset.aosDuration = 1500
-  progressBar.dataset.aosEasing = 'ease-out-sine'
+project.dataset.aos = 'flip-right'
+project.dataset.aosDuration = 1000
+project.dataset.aosDelay = 200
+project.dataset.aosOffset = 450
 
-})
 AOS.init()

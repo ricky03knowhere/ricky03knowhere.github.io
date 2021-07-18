@@ -136,7 +136,7 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 #education .parralax {
-  background: url(../img/photo-1517694712202-14dd9538aa97.jpg);
+  background: url(../img/carousel/photo-1517694712202-14dd9538aa97.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -194,12 +194,10 @@ body {
   margin-top: -7rem;
   padding-top: 20px;
 }
-
-.carousel-indicators li.active {
+#projects .carousel-indicators li.active {
   background: #0797f0 !important;
 }
-
-.carousel-control-prev, .carousel-control-next {
+#projects .carousel-control-prev, #projects .carousel-control-next {
   width: 30px;
   height: 30px;
   border-radius: 30px;
@@ -211,25 +209,21 @@ body {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 720px) {
-  .carousel-control-prev, .carousel-control-next {
+  #projects .carousel-control-prev, #projects .carousel-control-next {
     margin: 360px 10px 0;
   }
 }
-
-.carousel-control-next .fas {
+#projects .carousel-control-next .fas {
   transform: translateX(1.5px);
 }
-
-.carousel-control-prev .fas {
+#projects .carousel-control-prev .fas {
   transform: translateX(-1.5px);
 }
-
-.carousel-control-next .fas, .carousel-control-prev .fas {
+#projects .carousel-control-next .fas, #projects .carousel-control-prev .fas {
   color: #0797f0;
   font-size: 1.3rem;
 }
-
-#project {
+#projects .project {
   border-radius: 25px;
   width: 15rem;
   height: 18rem;
@@ -237,21 +231,21 @@ body {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   margin: 50px auto 100px;
 }
-#project .card-img-top {
+#projects .project .card-img-top {
   height: 6.2rem;
   margin-top: 20px;
   transform: scaleY(1.4);
 }
-#project .card-body {
+#projects .project .card-body {
   z-index: 2;
   bottom: 0;
   position: absolute;
   text-align: justify;
 }
-#project .card-title {
+#projects .project .card-title {
   text-align: left;
 }
-#project .card-body .btn {
+#projects .project .card-body .btn {
   border-radius: 30px;
   width: 90px;
   margin-top: 10px;
@@ -264,6 +258,9 @@ body {
   background: white;
   z-index: 1;
 }
+#certificates .contain {
+  display: none;
+}
 
 .hi-slide {
   display: block;
@@ -271,6 +268,12 @@ body {
   width: 80%;
   margin: 70px auto;
   height: 280px;
+}
+.hi-slide ul {
+  transform: translateX(0.65em);
+}
+.hi-slide ul li {
+  transform: translateX(8vw);
 }
 .hi-slide .hi-next, .hi-slide .hi-prev {
   position: absolute;
@@ -329,7 +332,7 @@ body {
   background-position: center;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .contain {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -400,12 +403,12 @@ body {
     transition: all 1s;
   }
 }
-@media (max-width: 720px) and (min-width: 720px) {
+@media (max-width: 990px) and (min-width: 720px) {
   .preview .card {
     width: 50%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview h3, .preview .year, .preview .prev, .preview .next {
     color: white;
     font-size: 1.4rem;
@@ -418,7 +421,7 @@ body {
     font-weight: bold;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview h3, .preview .year {
     transition: transform 0.3s, opacity 0.5s;
     opacity: 1;
@@ -431,24 +434,24 @@ body {
     opacity: 0;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview .year {
     font-size: 1.2rem;
     bottom: -7%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview .prev, .preview .next {
     position: absolute;
     bottom: 120px;
     cursor: pointer;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview .close {
     display: inline-block;
     position: absolute;
-    bottom: 15px;
+    bottom: 40px;
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
@@ -460,12 +463,12 @@ body {
     color: white;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview .prev {
     left: 20px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 990px) {
   .preview .next {
     right: 20px;
   }
@@ -884,11 +887,11 @@ footer .container {
     margin-bottom: 50px;
   }
 
-  #project {
+  #projects .project {
     width: 34rem;
     height: 34rem;
   }
-  #project .card-img-top {
+  #projects .project .card-img-top {
     height: 16rem;
     transform: scaleY(1.2);
   }
