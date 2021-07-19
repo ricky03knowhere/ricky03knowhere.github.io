@@ -558,7 +558,7 @@ body {
   margin-top: -4rem;
 }
 #hobbies .card {
-  height: 180px;
+  box-sizing: content-box;
   border-radius: 25px;
   padding: 20px 18px;
   color: white;
@@ -568,10 +568,11 @@ body {
 }
 #hobbies .card .card-title {
   font-size: 1.1rem;
+  margin-bottom: 1em;
   font-weight: 900;
 }
 #hobbies .card .card-text {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 400;
   width: 100%;
   height: 100%;
@@ -902,6 +903,7 @@ footer .container {
 
   #hobbies .card {
     height: 120px;
+    box-sizing: border-box;
   }
   #hobbies .card.code {
     height: 120px;
@@ -915,10 +917,7 @@ footer .container {
     right: 30px;
   }
   #hobbies .card.left > i {
-    right: 435px;
-  }
-  #hobbies .card.left .fa-itunes-note {
-    right: 448px;
+    left: 0.6em;
   }
   #hobbies .card.left .card-title {
     text-align: right;

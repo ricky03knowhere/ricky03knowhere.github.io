@@ -68,13 +68,61 @@ skillTitles.forEach((skill, i) => {
 });
 
 
+
 // <<---  PROJECT --->
 
 const project = document.querySelector('#projects .carousel-inner')
 
 project.dataset.aos = 'flip-right'
+project.dataset.aosEasing = 'ease-in-sine'
 project.dataset.aosDuration = 1000
 project.dataset.aosDelay = 200
 project.dataset.aosOffset = 450
+
+
+
+// <<---  SOCIALS --->
+
+const certififcates = document.querySelectorAll('#certificates .contain .card')
+console.log(certififcates);
+certififcates.forEach((certi, i) => {
+  certi.dataset.aos = 'fade-down'
+  certi.dataset.aosEasing = 'ease-in-sine'
+  certi.dataset.aosDuration = 550
+  certi.dataset.aosDelay = 300 * i
+})
+
+
+
+// <<---  SOCIALS --->
+
+const socials = document.querySelectorAll('#sosmed .row>div')
+
+socials.forEach((social, i) => {
+  social.dataset.aos = 'fade-up'
+  social.dataset.aosEasing = 'ease-in-sine'
+  social.dataset.aosDuration = 700
+  social.dataset.aosDelay = 300 * i
+})
+
+
+
+// <<---  HOBBIES --->
+
+const hobbiesR = document.querySelectorAll('#hobbies .card')
+
+hobbiesR.forEach((hobbs, i) => {
+
+  hobbs.dataset.aosDuration = 1200
+  hobbs.dataset.aosDelay = 200 * i
+
+
+  if ((i % 2) == 0) {
+    hobbs.dataset.aos = 'fade-right'
+  } else {
+    hobbs.dataset.aos = 'fade-left'
+  }
+})
+
 
 AOS.init()
