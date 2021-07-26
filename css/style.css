@@ -590,7 +590,7 @@ body {
 }
 #hobbies .lang h3 {
   margin-top: 90px;
-  margin-bottom: 80px !important;
+  margin-bottom: 1.5em;
 }
 #hobbies .bg {
   width: 100%;
@@ -609,7 +609,7 @@ body {
   line-height: 40px;
   font-size: 1.3rem;
   color: #efefef;
-  transform: rotate(-8deg);
+  transform: rotate(-9deg);
 }
 
 /*CONTACT */
@@ -636,11 +636,11 @@ body {
 }
 #contact .message .form-control {
   border-radius: 30px;
+  margin: 0.55em 0 1em;
 }
 #contact .message .btn {
   background: #0797f0;
   border-radius: 30px;
-  width: 90px;
 }
 
 body {
@@ -684,8 +684,7 @@ body {
   background-position: center;
   background-size: cover;
   filter: grayscale(1);
-  transform: scale(0.8);
-  transition: all 0.8s ease-in;
+  transition: all 0.6s ease-in;
 }
 #interests .cont .card.item-1::before {
   background-image: url(../img/interests/tech.jpg);
@@ -723,15 +722,21 @@ body {
 #interests .cont .card.item-12::before {
   background-image: url(../img/interests/alq.jpg);
 }
+#interests .cont .card:hover::before {
+  transform: rotate(30deg) scale(1.45);
+  filter: grayscale(0);
+}
 #interests .cont .card.item-3::before, #interests .cont .card.item-5::before {
   transform: scale(0.67);
 }
-#interests .cont .card:hover::before {
-  transform: rotate(30deg) scale(1.3);
-  filter: grayscale(0);
+#interests .cont .card.item-3:hover::before, #interests .cont .card.item-5:hover::before {
+  transform: rotate(30deg) scale(1.12);
+}
+#interests .cont .card.item-12::before {
+  transform: scale(1.4);
 }
 #interests .cont .card.item-12:hover::before {
-  transform: rotate(30deg) scale(1.6);
+  transform: rotate(30deg) scale(1.9);
 }
 #interests .cont .card:hover h5 {
   font-size: 0.6rem;

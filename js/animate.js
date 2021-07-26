@@ -67,9 +67,17 @@ skillTitles.forEach((skill, i) => {
   skill.dataset.aosDuration = 1000
 });
 
+const progressBars = document.querySelectorAll('.progress-bar')
+progressBars.forEach((progressBar, i) => {
+  
+  progressBar.dataset.aos = 'fade-right'
+  progressBar.dataset.aosDelay = i * 600
+  progressBar.dataset.aosDuration = 1500
+  progressBar.dataset.aosEasing = 'ease-out-sine'
+})
 
 
-// <<---  PROJECT --->
+// <<---  PROJECTS --->
 
 const project = document.querySelector('#projects .carousel-inner')
 
@@ -81,10 +89,10 @@ project.dataset.aosOffset = 450
 
 
 
-// <<---  SOCIALS --->
+// <<---  CERTIFICATES --->
 
 const certififcates = document.querySelectorAll('#certificates .contain .card')
-console.log(certififcates);
+
 certififcates.forEach((certi, i) => {
   certi.dataset.aos = 'fade-down'
   certi.dataset.aosEasing = 'ease-in-sine'
@@ -113,7 +121,7 @@ const hobbiesR = document.querySelectorAll('#hobbies .card')
 
 hobbiesR.forEach((hobbs, i) => {
 
-  hobbs.dataset.aosDuration = 1200
+  hobbs.dataset.aosDuration = 1300
   hobbs.dataset.aosDelay = 200 * i
 
 
@@ -123,6 +131,19 @@ hobbiesR.forEach((hobbs, i) => {
     hobbs.dataset.aos = 'fade-left'
   }
 })
+
+
+
+// <<---  LANGUAGE --->
+
+const langs = document.querySelectorAll('.lang .bg')
+
+langs.forEach((lang, i) => {
+  lang.dataset.aos = 'fade-down-left'
+  lang.dataset.aosDuration = 600
+  lang.dataset.aosDelay = 500 * i
+})
+
 
 
 AOS.init()

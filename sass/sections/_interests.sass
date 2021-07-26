@@ -41,22 +41,32 @@ $interests: (1:tech, 2:phi, 3:psy, 4:anm, 5:his, 6:isl, 7:cons, 8:phy, 9:mov, 10
         background-position: center
         background-size: cover
         filter: grayscale(1)
-        transform: scale(.8)
-        transition: all .8s ease-in
+        // transform: scale(1)
+        transition: all .6s ease-in
       
       @each $i, $x in $interests
         &.item-#{$i}::before
           background-image: url(../img/interests/#{$x}.jpg)
       
-      &.item-3::before, &.item-5::before
-        transform: scale(.67)
-      
       &:hover::before
-        transform: rotate(30deg) scale(1.3)
+        transform: rotate(30deg) scale(1.45)
         filter: grayscale(0)
     
+
+
+      &.item-3::before, &.item-5::before
+        transform: scale(.67)
+
+      &.item-3:hover::before, &.item-5:hover::before
+        transform: rotate(30deg) scale(1.12)
+      
+
+
+      &.item-12::before
+        transform: scale(1.4)
+
       &.item-12:hover::before
-        transform: rotate(30deg) scale(1.6)
+        transform: rotate(30deg) scale(1.9)
         
     
       &:hover h5

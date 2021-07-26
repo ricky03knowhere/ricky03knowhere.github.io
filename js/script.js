@@ -47,3 +47,40 @@ navLink.on('click', function () {
 let date = new Date()
 let year = date.getFullYear()
 $('footer #year').html(year)
+
+
+// <<--- Gsheet Handler --->>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzn2QWV-FntMDSF0iH4-K6Xp9KZKAc7YQsWOB8oYfVZ-a35rYslR6HxbL30pGUAcKLp/exec'
+const form = document.forms['submit-to-google-sheet']
+
+const btnLoading = document.querySelector('.btn-loading')
+const btnSubmit = document.querySelector('.btn-submit')
+const notif = document.querySelector('.notif')
+
+let notifHidden = true
+form.addEventListener('submit', e => {
+
+  e.preventDefault()
+  if (!notifHidden) {
+    notif.classList.toggle('d-none')
+  }
+
+  btnLoading.classList.toggle('d-none')
+  btnSubmit.classList.toggle('d-none')
+
+  fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => {
+
+      notif.classList.toggle('d-none')
+      btnLoading.classList.toggle('d-none')
+      btnSubmit.classList.toggle('d-none')
+      form.reset()
+      notifHidden = false
+      
+      console.log('Success!', response)
+    })
+    .catch(error => console.error('Error!', error.message))
+})
