@@ -377,6 +377,9 @@ body {
   .contain .card.item-7 {
     background-image: url(../img/certificates/7.png);
   }
+  .contain .card.item-8 {
+    background-image: url(../img/certificates/8.png);
+  }
 
   .preview {
     width: 100%;

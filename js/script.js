@@ -59,7 +59,6 @@ const notif = document.querySelector('.notif')
 
 let notifHidden = true
 form.addEventListener('submit', e => {
-
   e.preventDefault()
   if (!notifHidden) {
     notif.classList.toggle('d-none')

@@ -69,7 +69,7 @@ skillTitles.forEach((skill, i) => {
 
 const progressBars = document.querySelectorAll('.progress-bar')
 progressBars.forEach((progressBar, i) => {
-  
+
   progressBar.dataset.aos = 'fade-right'
   progressBar.dataset.aosDelay = i * 600
   progressBar.dataset.aosDuration = 1500

@@ -135,13 +135,13 @@
         An informatics engineering student who masters several programming languages,
         always follows technological developments, especially web programming,
         and has made several web projects that have been uploaded to <a href="https://github.com/ricky03knowhere"
-          target="_blank">github.com</a>.
+          class="text-decoration-none" target="_blank">github.com</a>.
       </p>
     </div>
 
     <div class="col-md-5 pb-4">
       <h3 class="title mt-4">Skills</h3>
-      <h6><i class="fab fa-html5 me-2"></i>HTML <i class="mx-2">/</i> <i class="fab fa-css3-alt me-2"></i>CSS</h6>
+      <h6 class="title-1"><i class="fab fa-html5 me-2"></i>HTML <i class="mx-2">/</i> <i class="fab fa-css3-alt me-2"></i>CSS</h6>
       <div class="progress mb-3">
         <div class="progress-bar bg-danger" role="progressbar" style="width: 88%" aria-valuemin="0" aria-valuemax="100">
         </div>
@@ -328,13 +328,13 @@
 
 
     <div class="contain d-none d-sm-block d-md-block d-xl-none d-xxl-none m-3 pt-5">
-      <div class="card item-1" index="1" data-title="peserta UTBK 2020" data-year="2020"></div>
-      <div class="card item-2" index="2" data-title="fullstack development training" data-year="2020"></div>
-      <div class="card item-3" index="3" data-title="pelatihan coding daring ready, set code!" data-year="2020"></div>
-      <div class="card item-4" index="4" data-title="kelas basic bahasa jepang" data-year="2020"></div>
-      <div class="card item-5" index="5" data-title="pelatihan nahwu shorof" data-year="2020"></div>
-      <div class="card item-6" index="6" data-title="pelatihan design logo" data-year="2021"></div>
-      <div class="card item-7" index="7" data-title="re-cloud webinar" data-year="2021"></div>
+      <div class="card item-7" index="7" data-title="junior web developer sertification" data-year="2021"></div>
+      <div class="card item-6" index="6" data-title="re-cloud challenges indonesia 2021" data-year="2021"></div>
+      <div class="card item-5" index="5" data-title="pelatihan design logo" data-year="2021"></div>
+      <div class="card item-4" index="4" data-title="pelatihan nahwu shorof" data-year="2020"></div>
+      <div class="card item-3" index="3" data-title="kelas basic bahasa jepang" data-year="2020"></div>
+      <div class="card item-2" index="2" data-title="pelatihan coding daring ready, set code!" data-year="2020"></div>
+      <div class="card item-1" index="1" data-title="fullstack development training" data-year="2020"></div>
     </div>
 
 
@@ -581,6 +581,13 @@
         <div class="card p-4 message" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1100"
           data-aos-offset="400">
           <h3 class="mb-5 mt-3"><i class="fas fa-paper-plane me-4" style="font-size: 48px;"></i>Send a message</h3>
+         
+          <div class="alert alert-success alert-dismissible fade show d-none notif" role="alert">
+            <strong>Thanks! </strong>
+            I have received your message and I will read it soon... <button type="button" class="btn-close"
+              data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
           <form id="form" name="submit-to-google-sheet">
             <div class="form-group">
               <label for="name">Name</label>
@@ -606,8 +613,13 @@
               <textarea cols="100" row="0" class="form-control" id="msg" name="message" required></textarea>
             </div>
             <div class="form-group">
-              <button type="button" class="btn btn-primary mt-2">
+              <button type="submit" class="btn btn-primary mt-2 btn-submit">
                 <i class="fas fa-paper-plane me-2"></i>Send
+              </button>
+
+              <button class="btn btn-primary d-none btn-loading" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+                Loading...
               </button>
             </div>
           </form>
