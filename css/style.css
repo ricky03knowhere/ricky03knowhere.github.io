@@ -125,6 +125,7 @@ body {
 }
 #profile .col-md-5 h6 {
   font-size: 0.8rem;
+  font-style: none !important;
 }
 #profile .col-md-5 h6 i {
   font-size: 1.2rem;
@@ -230,6 +231,7 @@ body {
   overflow: hidden;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   margin: 50px auto 100px;
+  border: none;
 }
 #projects .project .card-img-top {
   height: 6.2rem;
@@ -902,7 +904,7 @@ footer .container {
   }
   #projects .project .card-img-top {
     height: 16rem;
-    transform: scaleY(1.2);
+    transform: scaleY(1.16);
   }
 
   #contact .message {

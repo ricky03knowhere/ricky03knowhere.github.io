@@ -139,7 +139,7 @@ hobbiesR.forEach((hobbs, i) => {
 const langs = document.querySelectorAll('.lang .bg')
 
 langs.forEach((lang, i) => {
-  lang.dataset.aos = 'fade-down-left'
+  lang.dataset.aos = 'fade-up'
   lang.dataset.aosDuration = 600
   lang.dataset.aosDelay = 500 * i
 })
