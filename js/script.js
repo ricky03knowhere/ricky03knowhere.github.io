@@ -1,85 +1,74 @@
 // <<--- Navbar changed handler --->>
 $(document).ready(() => {
   $(window).scroll(() => {
-
-    var nScroll = $(this).scrollTop()
+    var nScroll = $(this).scrollTop();
 
     if (nScroll > 250) {
-      $(".navbar").addClass("nav")
-      $(".navbar-brand").removeClass("shad")
-      $(".nav-item").removeClass("shad")
-
+      $(".navbar").addClass("nav");
+      $(".navbar-brand").removeClass("shad");
+      $(".nav-item").removeClass("shad");
     } else if (nScroll < 250) {
-      $(".navbar").removeClass("nav")
-      $(".navbar-brand").addClass("shad")
-      $(".nav-item").addClass("shad")
+      $(".navbar").removeClass("nav");
+      $(".navbar-brand").addClass("shad");
+      $(".nav-item").addClass("shad");
     }
-  })
-})
-
+  });
+});
 
 // <<--- NavLink active handler --->>
-const navLink = $('.navbar-nav .nav-item .nav-link')
-navLink.on('click', function () {
+const navLink = $(".navbar-nav .nav-item .nav-link");
+navLink.on("click", function () {
+  navLink.removeClass("active");
 
-  navLink.removeClass('active')
-  $(this).addClass('active')
+  $(this).addClass("active");
+});
 
-})
+// Skills Tooltips
+$("#profile .progress-bar").each((i, el) => {
+  let skill = el.getAttribute("data-skill");
+  let value = el.getAttribute("data-tooltip");
 
-
-// <<--- Smooth scroll --->>
-// $(".scroll").on("click", function(e) {
-//   // e.preventDefault()
-//   const link = $(this).attr("href")
-//   const dest = $(link).offset().top - 100
-
-//   $("#page-top").animate({
-//     scrollTop: dest
-//   },
-//     1250)
-//   e.preventDefault
-
-// })
-
-
-// <<--- Copyright Year --->>
-let date = new Date()
-let year = date.getFullYear()
-$('footer #year').html(year)
-
+  new bootstrap.Tooltip($("#profile .progress." + skill), {
+    title: `${value}%`,
+    // offset: '200',
+    template:
+      '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+  });
+});
 
 // <<--- Gsheet Handler --->>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzn2QWV-FntMDSF0iH4-K6Xp9KZKAc7YQsWOB8oYfVZ-a35rYslR6HxbL30pGUAcKLp/exec'
-const form = document.forms['submit-to-google-sheet']
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbxmVaCrLgarwV8H92wrrEdlqQyhx5nFbTJz_k0X45NuJc8aS_gOYMGsQj_jb-o289fK/exec";
+const form = document.querySelector("Gform");
 
-const btnLoading = document.querySelector('.btn-loading')
-const btnSubmit = document.querySelector('.btn-submit')
-const notif = document.querySelector('.notif')
+const btnLoading = document.querySelector(".btn-loading");
+const btnSubmit = document.querySelector(".btn-submit");
+const notif = document.querySelector(".notif");
 
-let notifHidden = true
-form.addEventListener('submit', e => {
-  e.preventDefault()
+console.log("form ==>> ", form);
+let notifHidden = true;
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   if (!notifHidden) {
-    notif.classList.toggle('d-none')
+    notif.classList.toggle("d-none");
   }
 
-  btnLoading.classList.toggle('d-none')
-  btnSubmit.classList.toggle('d-none')
+  btnLoading.classList.toggle("d-none");
+  btnSubmit.classList.toggle("d-none");
 
   fetch(scriptURL, {
-      method: 'POST',
-      body: new FormData(form)
-    })
-    .then(response => {
+    method: "POST",
+    body: new FormData(form),
+    mode: "no-cors",
+  })
+    .then((response) => {
+      notif.classList.toggle("d-none");
+      btnLoading.classList.toggle("d-none");
+      btnSubmit.classList.toggle("d-none");
+      form.reset();
+      notifHidden = false;
 
-      notif.classList.toggle('d-none')
-      btnLoading.classList.toggle('d-none')
-      btnSubmit.classList.toggle('d-none')
-      form.reset()
-      notifHidden = false
-      
-      console.log('Success!', response)
+      console.log("Success!", response);
     })
-    .catch(error => console.error('Error!', error.message))
-})
+    .catch((error) => console.error("Error!", error.message));
+});
