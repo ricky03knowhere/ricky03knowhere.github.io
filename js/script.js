@@ -13,62 +13,63 @@ $(document).ready(() => {
       $(".nav-item").addClass("shad");
     }
   });
-});
 
-// <<--- NavLink active handler --->>
-const navLink = $(".navbar-nav .nav-item .nav-link");
-navLink.on("click", function () {
-  navLink.removeClass("active");
+  // <<--- NavLink active handler --->>
+  const navLink = $(".navbar-nav .nav-item .nav-link");
+  navLink.on("click", function () {
+    navLink.removeClass("active");
 
-  $(this).addClass("active");
-});
-
-// Skills Tooltips
-$("#profile .progress-bar").each((i, el) => {
-  let skill = el.getAttribute("data-skill");
-  let value = el.getAttribute("data-tooltip");
-
-  new bootstrap.Tooltip($("#profile .progress." + skill), {
-    title: `${value}%`,
-    // offset: '200',
-    template:
-      '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+    $(this).addClass("active");
   });
-});
 
-// <<--- Gsheet Handler --->>
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxmVaCrLgarwV8H92wrrEdlqQyhx5nFbTJz_k0X45NuJc8aS_gOYMGsQj_jb-o289fK/exec";
-const form = document.querySelector("Gform");
+  // Skills Tooltips
+  $("#profile .progress-bar").each((i, el) => {
+    let skill = el.getAttribute("data-skill");
+    let value = el.getAttribute("data-tooltip");
 
-const btnLoading = document.querySelector(".btn-loading");
-const btnSubmit = document.querySelector(".btn-submit");
-const notif = document.querySelector(".notif");
+    new bootstrap.Tooltip($("#profile .progress." + skill), {
+      title: `${value}%`,
+      // offset: '200',
+      template:
+        '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+    });
+  });
 
-console.log("form ==>> ", form);
-let notifHidden = true;
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (!notifHidden) {
-    notif.classList.toggle("d-none");
-  }
+  // <<--- Gsheet Handler --->>
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxmVaCrLgarwV8H92wrrEdlqQyhx5nFbTJz_k0X45NuJc8aS_gOYMGsQj_jb-o289fK/exec";
+  const form = document.forms["submit-to-google-sheet"];
 
-  btnLoading.classList.toggle("d-none");
-  btnSubmit.classList.toggle("d-none");
+  const btnLoading = document.querySelector(".btn-loading");
+  const btnSubmit = document.querySelector(".btn-submit");
+  const notif = document.querySelector(".notif");
 
-  fetch(scriptURL, {
-    method: "POST",
-    body: new FormData(form),
-    mode: "no-cors",
-  })
-    .then((response) => {
+  console.log("form ==>> ", form);
+
+  let notifHidden = true;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!notifHidden) {
       notif.classList.toggle("d-none");
-      btnLoading.classList.toggle("d-none");
-      btnSubmit.classList.toggle("d-none");
-      form.reset();
-      notifHidden = false;
+    }
 
-      console.log("Success!", response);
+    btnLoading.classList.toggle("d-none");
+    btnSubmit.classList.toggle("d-none");
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
+      mode: "no-cors",
     })
-    .catch((error) => console.error("Error!", error.message));
+      .then((response) => {
+        notif.classList.toggle("d-none");
+        btnLoading.classList.toggle("d-none");
+        btnSubmit.classList.toggle("d-none");
+        form.reset();
+        notifHidden = false;
+
+        console.log("Success!", response);
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
 });

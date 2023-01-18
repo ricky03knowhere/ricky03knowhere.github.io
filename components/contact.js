@@ -40,7 +40,7 @@ const contact = () => {
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
     
-            <form class="Gform" name="submit-to-google-sheet">
+            <form name="submit-to-google-sheet">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required />
