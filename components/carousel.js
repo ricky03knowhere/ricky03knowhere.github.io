@@ -1,16 +1,17 @@
 const carousel = () => {
+  let experience = new Date().getFullYear() - 2018
   const dataList = [
     {
       picture: "img/carousel/ilya-pavlov-OqtafYT5kTw-unsplash.jpg",
-      desc: "Front-end developer, 2 years has experienced & been learning webprogramming",
+      desc: `Front-end developer, ${experience} years experienced & continues learning web programming`,
     },
     {
       picture: "img/carousel/nikolay-tarashchenko-551722-unsplash.jpg",
-      desc: "So interesting to sci-fi and time travel moviesn,Enjoy with Edm and pop-alternative music",
+      desc: "So interesting to sci-fi and time travel movies, Enjoy with Edm and pop-alternative music",
     },
     {
       picture: "img/carousel/akrales_190424_3301_0426.0.jpg",
-      desc: "Always keep up with tech and gadget advancements",
+      desc: "Always abreast of technological developments",
     },
     {
       picture: "img/carousel/kevin-bhagat-343433-unsplash.jpg",
