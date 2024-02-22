@@ -37,7 +37,7 @@ $(document).ready(() => {
 
   // <<--- Gsheet Handler --->>
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxmVaCrLgarwV8H92wrrEdlqQyhx5nFbTJz_k0X45NuJc8aS_gOYMGsQj_jb-o289fK/exec";
+    "https://script.google.com/macros/s/AKfycbwfwcj4ep9omeWXCCqmnerWfMyCjv-ygH7WudXak4wygYRsIau9UESn9zRJ5BkW5psE/exec";
   const form = document.forms["submit-to-google-sheet"];
 
   const btnLoading = document.querySelector(".btn-loading");

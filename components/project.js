@@ -2,65 +2,109 @@ const project = () => {
   const indicators = [...Array(6)]
     .map(
       (el, i) =>
-        ` <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" ${
+      ` <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="${i}" ${
           i === 0 ? 'class="active" aria-current="true"' : ""
         }aria-label="Slide ${i + 1}"></button>`
     )
     .join("");
 
-  const dataList = [
-    {
-      picture: "img/projects/Screenshot (266).png",
-      title: "Web Pesantren Habiburrahman (2022)",
-      desc: `Web Frontend yang merupakan project akhir sekaligus sebagai ujian akhir semester (UAS) mata kuliah
+  const dataList = [{
+        picture: "img/projects/Screenshot 2024-02-22 093559.png",
+        title: "Sistem Infomasi Konstruksi (Manpro) (2023)",
+        desc: `Sistem Infomasi yang mengelola projek konstruksi pembangunan
+    dalam instansi Pt. Al - Ahzar Bandung. Mengelola data perkerja, data projek, data inventori, dll`,
+        link: "#!",
+        stack: [{
+          icon: "laravel",
+          color: "danger"
+        }],
+      },
+      {
+        picture: "img/projects/WhatsApp Image 2023-12-06 at 12.37.31_ea752bf1.jpg",
+        title: "Sistem Informasi Smart CCTV (Alcovision) (2023)",
+        desc: `Project  kerja praktik (KP) / magang di PT. Alco Tech
+    Indonesia. Sistem informasi yang memantau situasi dalam bus dengan
+    smart CCTV yang ditanamkan AI seperti pendeteksi distraksi sopir, deteksi jumlah penumpang,
+    dll.`,
+        link: "https://github.com/ricky03knowhere/alcovision-frontend",
+        stack: [{
+            icon: "react",
+            color: "primary"
+          },
+          {
+            icon: "python",
+            color: "info"
+          },
+        ],
+      },
+      {
+        picture: "img/projects/Screenshot (266).png",
+        title: "Web Pesantren Habiburrahman (2022)",
+        desc: `Web Frontend yang merupakan project akhir sekaligus sebagai ujian akhir semester (UAS) mata kuliah
         Pengembangan Aplikasi Web di
         perkuliahan semester 5, Dibuat dengan React.js dan Template Bootstrap 5 dengan tambahan kostumisasi
         tema.`,
-      link: "https://github.com/ricky03knowhere/pesantren-habiburahman",
-    },
-    {
-      picture: "img/projects/Screenshot (267).png",
-      title: "Web Pemesanan Tiket Situ Bagendit (2022)",
-      desc: `Merupakan project akhir sekaligus sebagai ujian akhir semester (UAS) mata kuliah Basis Data di
+        link: "https://github.com/ricky03knowhere/pesantren-habiburahman",
+        stack: [{
+            icon: "react",
+            color: "primary"
+          },
+          {
+            icon: "node-js",
+            color: "success"
+          },
+        ],
+      },
+      {
+        picture: "img/projects/Screenshot (267).png",
+        title: "Web Pemesanan Tiket Situ Bagendit (2022)",
+        desc: `Merupakan project akhir sekaligus sebagai ujian akhir semester (UAS) mata kuliah Basis Data di
         perkuliahan semester 4, dibuat dengan Node.js ,Express.js denganTemplate layouting menggunakan EJS &
         Bootstrap5.`,
-      link: "https://github.com/ricky03knowhere/bagendit_ticket_order",
-    },
-    {
-      picture: "img/projects/Screenshot.png",
-      title: "Pendaur Ulang Sampah Otomatis (2021)",
-      desc: `Merupakan project akhir sekaligus sebagai ujian akhir semester (UAS) mata kuliah Teori Bahasa & Automata
-        (TBO) di perkuliahan semester 3, dibuat dengan Javascript, JQuery dan Template Bootstrap 5.`,
-      link: "https://pemilah-sampah-otomatis.netlify.app/",
-    },
-    {
-      picture: "img/projects/Screenshot (27).png",
-      title: "Shanika Service Sofa (2021)",
-      desc: `Website profil perusahaan jasa service sofa yang bertempat di Jakarta. Dibuat dengan Template Bootstrap
+        link: "https://github.com/ricky03knowhere/bagendit_ticket_order",
+        stack: [{
+            icon: "react",
+            color: "primary"
+          },
+          {
+            icon: "node-js",
+            color: "success"
+          },
+        ],
+      },
+      {
+        picture: "img/projects/Screenshot (27).png",
+        title: "Shanika Service Sofa (2021)",
+        desc: `Website profil perusahaan jasa service sofa yang bertempat di Jakarta. Dibuat dengan Template Bootstrap
         5 dengan tambahan kostumisasi tema.`,
-      link: "https://shanika.netlify.app/",
-    },
-    {
-      picture: "img/projects/Screenshot.jpg",
-      title: "Comic Store (2021)",
-      desc: `Merupakan project akhir sekaligus sebagai ujian akhir semester
+        link: "https://shanika.netlify.app/",
+        stack: [{
+            icon: "html5",
+            color: "danger"
+          },
+          {
+            icon: "sass",
+            color: "danger"
+          },
+        ],
+      },
+      {
+        picture: "img/projects/Screenshot.jpg",
+        title: "Comic Store (2021)",
+        desc: `Merupakan project akhir sekaligus sebagai ujian akhir semester
         (UAS) mata kuliah Algoritma & pemrograman di perkuliahan
         semester 2, dibuat dengan Laravel 8 dan Template dari Argon
         Dashboard Admin.`,
-      link: "http://comic--store.herokuapp.com/",
-    },
-    {
-      picture: "img/projects/Screenshot_20201013-082407.png",
-      title: "People Report (2020)",
-      desc: `Merupakan dokumentasi pembelajaran saya yang masih dalam tahap
-        pengembangan. Dibuat menggunakan konsep MVC dalam Codeigniter
-        dan template Cooladmin yang berdasarkan soal UJIKOM RPL 2020.`,
-      link: "https://ricky03knowhere.github.io/people_report",
-    },
-  ]
+        link: "http://comic--store.herokuapp.com/",
+        stack: [{
+          icon: 'laravel',
+          color: 'danger'
+        }]
+      },
+    ]
     .map(
       (el, i) =>
-        `<div class="carousel-item ${i === 0 ? "active" : ""}">
+      `<div class="carousel-item ${i === 0 ? "active" : ""}">
   <div class="card project">
     <img class="card-img-top" src="${el.picture}" alt="Card image cap" />
     <div class="card-body">
@@ -68,6 +112,7 @@ const project = () => {
       <p class="card-text d-none d-md-block">
       ${el.desc}
       </p>
+      <h5>${el.stack.map( el => `<i class="fab fa-${el.icon} me-2 text-${el.color}"></i>`).join("")}</h5>
       <a href="${el.link}" target="_blank" class="btn btn-primary">View</a>
     </div>
   </div>

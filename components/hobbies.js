@@ -1,30 +1,29 @@
 const hobbies = () => {
-  const dataList1 = [
-    {
-      title: "Coding",
-      icon: "fas fa-laptop-code",
-      desc: "So passionate about programing especially web programming, cause Ilike solving problems with logic and designing web pages.",
-    },
-    {
-      title: "Watching Anime & movies",
-      icon: "fas fa-film",
-      desc: "Watching science-fiction and time travel anime, movies or TV series.",
-    },
+  const dataList1 = [{
+        title: "Coding",
+        icon: "fas fa-laptop-code",
+        desc: "So passionate about programing especially web programming, cause Ilike solving problems with logic and designing web pages.",
+      },
+      {
+        title: "Watching anime & movies",
+        icon: "fas fa-film",
+        desc: "Watching science-fiction and time travel anime, movies or TV series.",
+      },
 
-    {
-      title: "Learn something new",
-      icon: "fas fa-lightbulb",
-      desc: "Always open minded and curious to learn something new.",
-    },
-    {
-      title: "Listening to music",
-      icon: "fab fa-itunes-note",
-      desc: "Music is not to be listened but to feel and understand what the lyrics mean.",
-    },
-  ]
+      {
+        title: "Learn something new",
+        icon: "fas fa-lightbulb",
+        desc: "Always open minded and curious to learn something new.",
+      },
+      {
+        title: "Listening to music",
+        icon: "fab fa-itunes-note",
+        desc: "Music is not to be listened but to feel and understand what the lyrics mean.",
+      },
+    ]
     .map(
       (el, i) =>
-        ` <div class="card ${i % 2 === 0 ? 'right"' : 'left"'} ${
+      ` <div class="card ${i % 2 === 0 ? 'right"' : 'left"'} ${
           i === 0 ? 'code" data-aos-offset="300"' : ""
         }>
   <h3 class="card-title">${el.title}</h3>
@@ -39,7 +38,7 @@ const hobbies = () => {
   const dataList2 = ["Sundanese", "Indonesian", "English"]
     .map(
       (el, i) =>
-        `<div class="bg ${i === 0 ? 'pt-1" data-aos-offset="300"' : '"'}>
+      `<div class="bg ${i === 0 ? 'pt-1" data-aos-offset="300"' : '"'}>
   <img src="img/SeekPng.com_paint-png_34390.png" alt="pap" />
   <h2>${el}</h2>
 </div>`

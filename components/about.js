@@ -37,7 +37,7 @@ const about = () => {
           name: "Node.js",
         },
         {
-          icon: "fab fa-php",
+          icon: "fab fa-node-js",
           name: "Express.js",
         },
       ],
@@ -51,6 +51,10 @@ const about = () => {
           icon: "fab fa-react",
           name: "React.js",
         },
+        {
+          icon: "fab fa-laravel",
+          name: "Laravel",
+        },
       ],
       name: "react",
       color: "primary",
@@ -59,12 +63,8 @@ const about = () => {
     {
       title: [
         {
-          icon: "fa fa-fire",
-          name: "Codeigniter",
-        },
-        {
-          icon: "fab fa-laravel",
-          name: "Laravel",
+          icon: "fab fa-python",
+          name: "Python",
         },
       ],
       name: "laravel",

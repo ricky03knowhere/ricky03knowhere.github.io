@@ -1,22 +1,27 @@
 const certificate = () => {
-  let dataList = Array(7)
+  let dataList = Array(7);
   dataList = [
+    { title: "Alibaba Cloud Services -  Certified Developer", year: "2023" },
+    { title: "Belajar Machine Learning untuk Pemula", year: "2023" },
+    { title: "Belajar Membuat Aplikasi Web dengan React", year: "2023" },
+    {
+      title:
+        "(MCE) Technology Literacy for Educators - 21st Century Learning Design",
+      year: "2022",
+    },
     {
       title: "HackatonTeknik Informatika UIN Sunan Gunung Djati Bandung",
       year: "2022",
     },
-    { title: "AI with A Cause bersama Huawei", year: "2021" },
-    { title: "pelatihan Deep Learning Data Science", year: "2021" },
     { title: "junior web developer sertification", year: "2021" },
-    { title: "re-cloud challenges indonesia 2021", year: "2021" },
-    { title: "pelatihan coding daring ready, set code!", year: "2020" },
     { title: "fullstack development training", year: "2020" },
   ]
     .map(
       (el, i) =>
-        `<div class="card item-${dataList.length - i}" index="${
-          dataList.length - i
-        }" data-title="${el.title}" data-year="${el.year}"></div>`
+        `<div class="card item-${dataList.length -
+          i}" index="${dataList.length - i}" data-title="${
+          el.title
+        }" data-year="${el.year}"></div>`
     )
     .join("");
   return (
@@ -34,9 +39,8 @@ const certificate = () => {
         ${[...Array(7)]
           .map(
             (el, i) =>
-              `<li><img src="img/certificates/${1 + i}.png" alt="${
-                i + 1
-              }" /></li>`
+              `<li><img src="img/certificates/${1 + i}.png" alt="${i +
+                1}" /></li>`
           )
           .join("")}
         </ul>
