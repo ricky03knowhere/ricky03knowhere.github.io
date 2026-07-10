@@ -1,0 +1,22 @@
+{
+  "siteName": "Ricky Portfolio",
+  "title": "Fullstack Web Developer",
+  "heroTyping": [
+    "Fullstack Developer",
+    "Frontend Developer",
+    "Backend Developer"
+  ],
+  "projectPerPage": 6,
+  "portfolioSortDefault": "newest",
+  "enableLoader": true,
+  "enableCursorGlow": true,
+  "enableParticles": true,
+  "enableAOS": true,
+  "enableGSAP": true,
+  "theme": {
+    "primary": "#081220",
+    "secondary": "#0E1C2F",
+    "cyan": "#22D3EE",
+    "purple": "#8B5CF6"
+  }
+}

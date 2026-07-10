@@ -1,0 +1,19 @@
+[
+  { "id": "html", "name": "HTML5", "logo": "html5", "category": "Frontend", "color": "#E34F26" },
+  { "id": "css", "name": "CSS3", "logo": "css3", "category": "Frontend", "color": "#1572B6" },
+  { "id": "javascript", "name": "JavaScript", "logo": "javascript", "category": "Frontend", "color": "#F7DF1E" },
+  { "id": "typescript", "name": "TypeScript", "logo": "typescript", "category": "Frontend", "color": "#3178C6" },
+  { "id": "react", "name": "React", "logo": "react", "category": "Frontend", "color": "#61DAFB" },
+  { "id": "nextjs", "name": "Next.js", "logo": "nextjs", "category": "Frontend", "color": "#FFFFFF" },
+  { "id": "nodejs", "name": "Node.js", "logo": "nodedotjs", "category": "Backend", "color": "#339933" },
+  { "id": "express", "name": "Express", "logo": "express", "category": "Backend", "color": "#FFFFFF" },
+  { "id": "python", "name": "Python", "logo": "python", "category": "Backend", "color": "#3776AB" },
+  { "id": "supabase", "name": "Supabase", "logo": "supabase", "category": "Backend", "color": "#3ECF8E" },
+  { "id": "firebase", "name": "Firebase", "logo": "firebase", "category": "Backend", "color": "#FFCA28" },
+  { "id": "tailwind", "name": "TailwindCSS", "logo": "tailwindcss", "category": "Frontend", "color": "#06B6D4" },
+  { "id": "shadcn", "name": "Shadcn UI", "logo": "shadcnui", "category": "Frontend", "color": "#FFFFFF" },
+  { "id": "git", "name": "Git", "logo": "git", "category": "Tools", "color": "#F05032" },
+  { "id": "github", "name": "GitHub", "logo": "github", "category": "Tools", "color": "#FFFFFF" },
+  { "id": "figma", "name": "Figma", "logo": "figma", "category": "Tools", "color": "#F24E1E" },
+  { "id": "vercel", "name": "Vercel", "logo": "vercel", "category": "Tools", "color": "#FFFFFF" }
+]

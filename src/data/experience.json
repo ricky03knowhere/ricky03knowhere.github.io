@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "company": "TechVenture Studio",
+    "logo": "",
+    "position": "Fullstack Developer",
+    "employmentType": "Full-time",
+    "location": "Jakarta, Indonesia",
+    "startDate": "2024-01",
+    "endDate": "",
+    "isCurrent": true,
+    "description": "Lead development of enterprise-scale web applications using React, Next.js, and Node.js. Architected microservices infrastructure serving 50k+ daily active users with 99.9% uptime.",
+    "stack": ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"]
+  },
+  {
+    "id": 2,
+    "company": "Digital Nusantara",
+    "logo": "",
+    "position": "Frontend Developer",
+    "employmentType": "Full-time",
+    "location": "Bandung, Indonesia",
+    "startDate": "2023-03",
+    "endDate": "2023-12",
+    "isCurrent": false,
+    "description": "Built responsive web applications and design systems for fintech clients. Implemented CI/CD pipelines and reduced page load times by 40% through performance optimization.",
+    "stack": ["React", "TailwindCSS", "TypeScript", "Firebase"]
+  },
+  {
+    "id": 3,
+    "company": "Startup Kreatif",
+    "logo": "",
+    "position": "Junior Web Developer",
+    "employmentType": "Internship",
+    "location": "Remote",
+    "startDate": "2022-06",
+    "endDate": "2023-02",
+    "isCurrent": false,
+    "description": "Developed landing pages and e-commerce features using modern JavaScript frameworks. Collaborated in agile sprints and contributed to open-source projects.",
+    "stack": ["JavaScript", "React", "Express", "MongoDB"]
+  }
+]

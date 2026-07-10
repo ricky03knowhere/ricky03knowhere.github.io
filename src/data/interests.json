@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Technology",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop",
+    "description": "Fascinated by cutting-edge technology, from quantum computing to blockchain. Always exploring new frameworks and tools that push the boundaries of what's possible."
+  },
+  {
+    "id": 2,
+    "title": "Philosophy",
+    "image": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=400&fit=crop",
+    "description": "Deep thinker who enjoys exploring existentialism, stoicism, and Eastern philosophy. Believes in the intersection of logic and wisdom."
+  },
+  {
+    "id": 3,
+    "title": "Psychology",
+    "image": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=400&h=400&fit=crop",
+    "description": "Understanding human behavior and cognitive patterns. Interested in how psychology applies to UX design and user engagement."
+  },
+  {
+    "id": 4,
+    "title": "History",
+    "image": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=400&h=400&fit=crop",
+    "description": "History enthusiast who believes understanding the past is key to building a better future. Fascinated by ancient civilizations and modern revolutions."
+  },
+  {
+    "id": 5,
+    "title": "Islamic Studies",
+    "image": "https://images.unsplash.com/photo-1542816417-0983c9c7ad02?w=400&h=400&fit=crop",
+    "description": "Dedicated to deepening understanding of Islamic teachings through Qur'an, Hadith, and scholarly works. Finding peace in spiritual growth."
+  },
+  {
+    "id": 6,
+    "title": "Conspiracy",
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=400&h=400&fit=crop",
+    "description": "Enjoys questioning narratives and exploring alternative perspectives. Critical thinker who loves connecting dots across different domains."
+  },
+  {
+    "id": 7,
+    "title": "Physics",
+    "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=400&fit=crop",
+    "description": "Captivated by quantum mechanics, relativity, and the fundamental laws that govern our universe. Science is the poetry of reality."
+  },
+  {
+    "id": 8,
+    "title": "Movies",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&h=400&fit=crop",
+    "description": "Cinema lover with a taste for sci-fi, psychological thrillers, and mind-bending narratives. Appreciates both visual storytelling and deep plots."
+  },
+  {
+    "id": 9,
+    "title": "Astronomy",
+    "image": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=400&h=400&fit=crop",
+    "description": "Stargazer at heart. Fascinated by black holes, nebulae, and the vast mysteries of the cosmos. Dreams of understanding our place in the universe."
+  },
+  {
+    "id": 10,
+    "title": "AI",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=400&fit=crop",
+    "description": "Passionate about artificial intelligence, machine learning, and the ethical implications of sentient machines. Building with AI daily."
+  },
+  {
+    "id": 11,
+    "title": "Photography",
+    "image": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&h=400&fit=crop",
+    "description": "Capturing moments through the lens. Enjoys street photography, landscapes, and experimental compositions that tell stories."
+  },
+  {
+    "id": 12,
+    "title": "Anime",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop",
+    "description": "Proud weeb who appreciates Japanese animation as an art form. From philosophical seinen to heartwarming slice-of-life stories."
+  },
+  {
+    "id": 13,
+    "title": "Travel",
+    "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=400&fit=crop",
+    "description": "Explorer who believes travel is the best education. Loves discovering new cultures, cuisines, and hidden gems around the world."
+  },
+  {
+    "id": 14,
+    "title": "Music",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop",
+    "description": "Music is the soundtrack of life. Eclectic taste ranging from lo-fi hip hop to classical orchestral pieces. Finds inspiration in melodies."
+  },
+  {
+    "id": 15,
+    "title": "Programming",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=400&fit=crop",
+    "description": "Coding is not just a profession, it's a passion. Loves solving complex problems and building elegant solutions that make a difference."
+  }
+]

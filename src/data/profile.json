@@ -1,0 +1,17 @@
+{
+  "name": "Ricky Ackerman",
+  "nickname": "Ricky",
+  "profession": "Fullstack Web Developer",
+  "headline": "Web Developer | Philosopher | Weebs",
+  "about": "Saya adalah seorang Web Developer yang passionate dalam membangun pengalaman digital yang modern dan bermakna. Dengan fondasi kuat dalam frontend dan backend development, saya senang menciptakan solusi yang tidak hanya fungsional tetapi juga estetis.",
+  "avatar": "/profile.png",
+  "location": "Jakarta, Indonesia",
+  "email": "ricky@example.com",
+  "phone": "+6281234567890",
+  "whatsapp": "https://wa.me/6281234567890",
+  "resume": "/resume.pdf",
+  "quote": "Keep Coding, Stay awesome, no drama just learn.",
+  "yearsExperience": 2,
+  "totalProjects": 30,
+  "totalCertificates": 15
+}
