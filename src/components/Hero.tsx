@@ -194,7 +194,7 @@ export default function Hero() {
 
         {/* Greeting */}
         <p className="hero-greeting text-accent-cyan text-base md:text-xl mb-4 font-semibold tracking-[0.2em] uppercase">
-          Halo, Saya
+          Hello, I'm
         </p>
 
         {/* Name */}

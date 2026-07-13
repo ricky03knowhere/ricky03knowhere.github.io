@@ -1,41 +1,86 @@
 [
   {
     "id": 1,
-    "company": "TechVenture Studio",
+    "company": "PT. Adhikari Inovasi Indonesia (Adhivasindo)",
     "logo": "",
     "position": "Fullstack Developer",
-    "employmentType": "Full-time",
-    "location": "Jakarta, Indonesia",
-    "startDate": "2024-01",
+    "employmentType": "Contract",
+    "location": "Bandung, West Java, Indonesia",
+    "startDate": "2024-12",
     "endDate": "",
     "isCurrent": true,
-    "description": "Lead development of enterprise-scale web applications using React, Next.js, and Node.js. Architected microservices infrastructure serving 50k+ daily active users with 99.9% uptime.",
-    "stack": ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"]
+    "description": "Build and design Backend REST API using PHP (CodeIgniter), then integrate it with AngularJS frontend and implement responsive UI using Tailwind CSS. Develop several enterprise information systems including police resource management, education management systems, and a gym management application.",
+    "stack": [
+      "PHP",
+      "CodeIgniter 4",
+      "AngularJS",
+      "Tailwind CSS",
+      "MySQL",
+      "REST API",
+      "JavaScript"
+    ]
   },
   {
     "id": 2,
-    "company": "Digital Nusantara",
+    "company": "PT. Al-Azhar Bandung",
     "logo": "",
-    "position": "Frontend Developer",
-    "employmentType": "Full-time",
-    "location": "Bandung, Indonesia",
-    "startDate": "2023-03",
-    "endDate": "2023-12",
+    "position": "Full Stack Engineer",
+    "employmentType": "Freelance",
+    "location": "Bandung, West Java, Indonesia",
+    "startDate": "2023-11",
+    "endDate": "2024-05",
     "isCurrent": false,
-    "description": "Built responsive web applications and design systems for fintech clients. Implemented CI/CD pipelines and reduced page load times by 40% through performance optimization.",
-    "stack": ["React", "TailwindCSS", "TypeScript", "Firebase"]
+    "description": "Develop an information system that manages construction projects within PT. Al-Azhar Bandung. Responsible for designing the database, developing backend services using Laravel, implementing frontend features, and managing project workflow and monitoring.",
+    "stack": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Bootstrap",
+      "JavaScript",
+      "REST API"
+    ]
   },
   {
     "id": 3,
-    "company": "Startup Kreatif",
+    "company": "PT. Alcotech ID",
     "logo": "",
-    "position": "Junior Web Developer",
+    "position": "Frontend Web Developer",
     "employmentType": "Internship",
-    "location": "Remote",
-    "startDate": "2022-06",
-    "endDate": "2023-02",
+    "location": "Bandung, West Java, Indonesia",
+    "startDate": "2023-10",
+    "endDate": "2023-12",
     "isCurrent": false,
-    "description": "Developed landing pages and e-commerce features using modern JavaScript frameworks. Collaborated in agile sprints and contributed to open-source projects.",
-    "stack": ["JavaScript", "React", "Express", "MongoDB"]
+    "description": "Develop an AI-powered Smart CCTV information system for public transportation. Build the frontend dashboard using React.js and integrate it with Flask backend APIs. The system monitors bus conditions by detecting driver distraction, recognizing the driver's face, counting passengers, and displaying real-time monitoring results.",
+    "stack": [
+      "React.js",
+      "Flask",
+      "Python",
+      "REST API",
+      "MySQL",
+      "JavaScript",
+      "AI",
+      "OpenCV"
+    ]
+  },
+  {
+    "id": 4,
+    "company": "Ewacomm",
+    "logo": "",
+    "position": "Frontend Web Developer",
+    "employmentType": "Full-time",
+    "location": "Bandung, West Java, Indonesia",
+    "startDate": "2022-06",
+    "endDate": "2022-10",
+    "isCurrent": false,
+    "description": "Develop and design frontend interfaces using React.js, then integrate them with Blockchain APIs. The application is an NFT Marketplace that enables digital asset transactions using Web3 and Cryptocurrency technologies with responsive and modern user interfaces.",
+    "stack": [
+      "React.js",
+      "JavaScript",
+      "Web3.js",
+      "Blockchain",
+      "HTML5",
+      "CSS3",
+      "REST API"
+    ]
   }
 ]

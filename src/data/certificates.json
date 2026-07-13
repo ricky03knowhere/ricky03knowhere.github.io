@@ -1,50 +1,74 @@
 [
   {
     "id": 1,
-    "title": "Google Associate Cloud Engineer",
-    "issuer": "Google Cloud",
-    "year": 2024,
-    "credential": "https://www.credential.net/example1",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
+    "title": "Belajar Machine Learning untuk Pemula",
+    "issuer": "Dicoding Indonesia",
+    "year": 2023,
+    "credential": "https://www.credential.net/example2",
+    "image": "./img/certificates/6.png"
   },
   {
     "id": 2,
-    "title": "Meta Frontend Developer Professional",
-    "issuer": "Meta (Coursera)",
-    "year": 2024,
-    "credential": "https://www.credential.net/example2",
-    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
+    "title": "Belajar Membuat Aplikasi Web dengan React",
+    "issuer": "Dicoding Indonesia",
+    "year": 2023,
+    "credential": "https://www.credential.net/example3",
+    "image": "./img/certificates/5.png"
   },
   {
     "id": 3,
-    "title": "AWS Solutions Architect Associate",
-    "issuer": "Amazon Web Services",
+    "title": "Memulai Pemrograman dengan Python",
+    "issuer": "Dicoding Indonesia",
     "year": 2023,
-    "credential": "https://www.credential.net/example3",
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
+    "credential": "https://www.credential.net/example2",
+    "image": "./img/certificates/8.png"
   },
   {
     "id": 4,
-    "title": "React Developer Certification",
-    "issuer": "HackerRank",
-    "year": 2023,
+    "title": "(MCE) Technology Literacy for Educators - 21st Century Learning Design",
+    "issuer": "Microsoft Certified Educator",
+    "year": 2022,
     "credential": "https://www.credential.net/example4",
-    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop"
+    "image": "./img/certificates/4.png"
   },
   {
     "id": 5,
-    "title": "JavaScript Algorithms & Data Structures",
-    "issuer": "freeCodeCamp",
+    "title": "Database Programming with SQL",
+    "issuer": "Oracle Academy",
     "year": 2022,
     "credential": "https://www.credential.net/example5",
-    "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&h=400&fit=crop"
+    "image": "./img/certificates/9.png"
   },
   {
     "id": 6,
-    "title": "Full Stack Web Development",
-    "issuer": "Dicoding Indonesia",
+    "title": "Hackaton Teknik Informatika UIN Sunan Gunung Djati Bandung",
+    "issuer": "IT FAIR SE II",
     "year": 2022,
+    "credential": "https://www.credential.net/example5",
+    "image": "./img/certificates/3.png"
+  },
+  {
+    "id": 7,
+    "title": "Alibaba Cloud Services -  Certified Developer",
+    "issuer": "Alibaba Cloud",
+    "year": 2021,
+    "credential": "https://www.credential.net/example1",
+    "image": "./img/certificates/7.png"
+  },
+  {
+    "id": 8,
+    "title": "Junior Web Developer Sertification",
+    "issuer": "LSP (BPPTIK)",
+    "year": 2021,
     "credential": "https://www.credential.net/example6",
-    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+    "image": "./img/certificates/2.png"
+  },
+  {
+    "id": 9,
+    "title": "Fullstack Develpment Training",
+    "issuer": "TalenDig",
+    "year": 2020,
+    "credential": "https://www.credential.net/example6",
+    "image": "./img/certificates/1.png"
   }
 ]

@@ -1,17 +1,17 @@
 {
-  "name": "Ricky Ackerman",
+  "name": "Ricky M Ridwan",
   "nickname": "Ricky",
   "profession": "Fullstack Web Developer",
   "headline": "Web Developer | Philosopher | Weebs",
-  "about": "Saya adalah seorang Web Developer yang passionate dalam membangun pengalaman digital yang modern dan bermakna. Dengan fondasi kuat dalam frontend dan backend development, saya senang menciptakan solusi yang tidak hanya fungsional tetapi juga estetis.",
-  "avatar": "/profile.png",
-  "location": "Jakarta, Indonesia",
-  "email": "ricky@example.com",
-  "phone": "+6281234567890",
-  "whatsapp": "https://wa.me/6281234567890",
+  "about": "An informatics engineering who graduated in 2024, masters several programming languages, always follows technological developments, especially fullstack web programming, has developed several private company projects & made several web projects that have been uploaded to github.com. Open minded and passionate learning new things, always love & open to improve my knowledge and skills in web technologies.",
+  "avatar": "/img/profile.JPG",
+  "location": "Bandung, Indonesia",
+  "email": "ricky03senju@gmail.com",
+  "phone": "+6285861874609",
+  "whatsapp": "https://wa.me/6285861874609",
   "resume": "/resume.pdf",
-  "quote": "Keep Coding, Stay awesome, no drama just learn.",
+  "quote": "Keep Coding, Stay awesome, No drama just learn.",
   "yearsExperience": 2,
   "totalProjects": 30,
-  "totalCertificates": 15
+  "totalCertificates": 10
 }

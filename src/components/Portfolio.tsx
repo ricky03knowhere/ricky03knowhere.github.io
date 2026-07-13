@@ -14,7 +14,6 @@ export default function Portfolio() {
   const [selectedStack, setSelectedStack] = useState('All');
   const [sortBy, setSortBy] = useState('newest');
   const [currentPage, setCurrentPage] = useState(1);
-  const [showFilters, setShowFilters] = useState(false);
 
   // Dynamic filter lists
   const availableYears = useMemo(() => {

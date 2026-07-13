@@ -5,4 +5,7 @@ export interface Social {
   email: string;
   whatsapp: string;
   portfolio: string;
+  blog?: string;
+  youtube?: string;
+  facebook?: string;
 }

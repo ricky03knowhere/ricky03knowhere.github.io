@@ -1,202 +1,132 @@
 [
   {
     "id": "1",
-    "title": "Quantum Flow - AI Dashboard",
-    "slug": "quantum-flow-ai-dashboard",
-    "description": "Premium analytics dashboard for generative AI platforms featuring real-time telemetry, model optimization monitoring, and token burn rate tracking.",
-    "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "title": "Sistem Rekomendasi Musik dengan Deteksi Genre & Emosi Pengguna",
+    "slug": "sistem-rekomendasi-musik-deteksi-genre-emosi",
+    "description": "Website rekomendasi musik berbasis AI yang mampu mendeteksi genre musik menggunakan CNN serta emosi pengguna menggunakan MediaPipe dan ANN untuk memberikan rekomendasi lagu yang lebih personal. Merupakan project Tugas Akhir (Skripsi).",
+    "thumbnail": "/img/projects/genre.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+      "/projects/genre.png"
     ],
-    "demoUrl": "https://quantumflow.dev",
-    "githubUrl": "https://github.com",
-    "year": 2026,
+    "demoUrl": "",
+    "githubUrl": "",
+    "year": 2024,
     "status": "Completed",
-    "category": "Web Application",
-    "stack": ["React", "TypeScript", "TailwindCSS", "Framer Motion", "Supabase"],
+    "category": "Artificial Intelligence",
+    "stack": [
+      "Python",
+      "TensorFlow",
+      "Streamlit",
+      "MediaPipe",
+      "OpenCV",
+      "Librosa",
+      "MySQL"
+    ],
     "featured": true,
-    "client": "Aetheris AI",
-    "duration": "3 Months",
-    "role": "Lead Frontend Engineer"
+    "client": "UIN Sunan Gunung Djati Bandung",
+    "duration": "5 Months",
+    "role": "AI & Fullstack Developer"
   },
   {
     "id": "2",
-    "title": "E-Commerce Cyberpunk Store",
-    "slug": "cyberpunk-store",
-    "description": "Fully immersive web shop design for futuristic streetwear, featuring glassmorphism micro-animations, customizable 3D products, and crypto checkout.",
-    "thumbnail": "https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?auto=format&fit=crop&w=800&q=80",
+    "title": "Manpro - Sistem Informasi Konstruksi Pembangunan Al-Azhar",
+    "slug": "manpro-sistem-informasi-konstruksi-al-azhar",
+    "description": "Sistem informasi yang digunakan untuk mengelola proyek konstruksi pembangunan pada instansi PT. Al-Azhar Bandung, mulai dari monitoring progres proyek hingga pengelolaan data proyek.",
+    "thumbnail": "/img/projects/manpro.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?auto=format&fit=crop&w=800&q=80"
+      "/projects/manpro/1.png"
     ],
-    "demoUrl": "https://cyberstore.dev",
-    "githubUrl": "https://github",
-    "year": 2026,
+    "demoUrl": "",
+    "githubUrl": "",
+    "year": 2024,
     "status": "Completed",
-    "category": "E-Commerce",
-    "stack": ["Next.js", "React", "TailwindCSS", "NodeJS", "MongoDB"],
-    "featured": true,
-    "client": "NeoTokyo Apparel",
-    "duration": "2 Months",
-    "role": "Fullstack Developer"
+    "category": "Web Application",
+    "stack": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Bootstrap"
+    ],
+    "featured": false,
+    "client": "PT. Al-Azhar Bandung",
+    "duration": "5 Months",
+    "role": "Backend Developer"
   },
   {
     "id": "3",
-    "title": "Aether - Web3 Portfolio Builder",
-    "slug": "aether-portfolio-builder",
-    "description": "No-code portfolio builder tailored specifically for blockchain engineers, displaying dynamic gas prices, network states, and NFT credentials.",
-    "thumbnail": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+    "title": "Alcovision - Sistem Informasi Smart CCTV dalam Bus",
+    "slug": "alcovision-smart-cctv-bus",
+    "description": "Sistem Smart CCTV berbasis AI yang mampu memonitor kondisi di dalam bus seperti deteksi distraksi sopir, identifikasi wajah sopir, perhitungan jumlah penumpang, dan berbagai analisis visual lainnya. Project Kerja Praktik (Magang).",
+    "thumbnail": "/img/projects/alcovision.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80"
+      "/projects/alcovision/1.png"
     ],
-    "demoUrl": "https://aether.dev",
-    "githubUrl": "https://github",
-    "year": 2025,
+    "demoUrl": "",
+    "githubUrl": "",
+    "year": 2023,
     "status": "Completed",
-    "category": "Web Application",
-    "stack": ["React", "TypeScript", "TailwindCSS", "Shadcn", "Firebase"],
-    "featured": false,
-    "client": "Aether Labs",
-    "duration": "4 Months",
-    "role": "Frontend Architect"
+    "category": "Artificial Intelligence",
+    "stack": [
+      "React.js",
+      "Flask",
+      "Python",
+      "YOLOv8",
+      "OpenCV",
+      "MySQL"
+    ],
+    "featured": true,
+    "client": "PT. Alco Tech Indonesia",
+    "duration": "3 Months",
+    "role": "AI & Fullstack Developer"
   },
   {
     "id": "4",
-    "title": "Zenith - Real-Time Collaborative Canvas",
-    "slug": "zenith-canvas",
-    "description": "A high-performance interactive layout planner allowing hundreds of concurrent users to place assets, draw flows, and chat live in dynamic rooms.",
-    "thumbnail": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
+    "title": "Pesantren Habiburrahman - Sistem Informasi & Pengelolaan Data",
+    "slug": "pesantren-habiburrahman",
+    "description": "Website sistem informasi dan pengelolaan data pesantren yang dikembangkan sebagai project akhir mata kuliah Pengembangan Aplikasi Web menggunakan React.js dan Bootstrap 5.",
+    "thumbnail": "/img/projects/pesantren.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80"
+      "/projects/pesantren/1.png"
     ],
-    "demoUrl": "https://zenithcanvas.dev",
-    "githubUrl": "https://github",
-    "year": 2025,
+    "demoUrl": "",
+    "githubUrl": "",
+    "year": 2023,
     "status": "Completed",
     "category": "Web Application",
-    "stack": ["React", "Express", "MongoDB", "TypeScript", "TailwindCSS"],
-    "featured": false,
-    "client": "Self-Initiated",
-    "duration": "1 Month",
-    "role": "Creator"
-  },
-  {
-    "id": "5",
-    "title": "Helios - Smart Home Dashboard",
-    "slug": "helios-smart-home",
-    "description": "Clean, sleek IoT control dashboard displaying smart thermostat, lighting controls, security camera feeds, and automated schedules.",
-    "thumbnail": "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80"
+    "stack": [
+      "React.js",
+      "Bootstrap 5",
+      "Node.js",
+      "Express.js",
+      "MySQL"
     ],
-    "demoUrl": "https://helios.dev",
-    "githubUrl": "https://github",
-    "year": 2025,
-    "status": "Completed",
-    "category": "IoT Application",
-    "stack": ["React", "TypeScript", "TailwindCSS", "NodeJS", "Express"],
     "featured": false,
-    "client": "Helios Inc",
-    "duration": "2 Months",
+    "client": "UIN Sunan Gunung Djati Bandung",
+    "duration": "3 Months",
     "role": "Fullstack Developer"
   },
   {
-    "id": "6",
-    "title": "Nova - Developer Job Board",
-    "slug": "nova-job-board",
-    "description": "Niche employment marketplace for developer positions, indexing crypto, AI, and systems engineering jobs globally with precise filtering.",
-    "thumbnail": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+    "id": "5",
+    "title": "Xhyre - NFT Marketplace",
+    "slug": "xhyre-nft-marketplace",
+    "description": "Website marketplace NFT berbasis teknologi Web3 dan Blockchain yang mendukung transaksi cryptocurrency untuk jual beli aset digital.",
+    "thumbnail": "/img/projects/xhyre.png",
     "gallery": [
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80"
+      "/projects/xhyre/1.png"
     ],
-    "demoUrl": "https://novajobs.dev",
-    "githubUrl": "https://github",
-    "year": 2024,
+    "demoUrl": "",
+    "githubUrl": "",
+    "year": 2022,
     "status": "Completed",
-    "category": "SaaS Platform",
-    "stack": ["React", "Supabase", "TailwindCSS", "TypeScript"],
-    "featured": true,
-    "client": "Nova Network",
+    "category": "Web3 Application",
+    "stack": [
+      "React.js",
+      "Blockchain",
+      "Web3.js"
+    ],
+    "featured": false,
+    "client": "Ewacomm",
     "duration": "5 Months",
-    "role": "Lead Architect"
-  },
-  {
-    "id": "7",
-    "title": "Vortex - Crypto Trading Simulator",
-    "slug": "vortex-trading-sim",
-    "description": "Paper trading environment utilizing mock funds to practice complex perpetual positions with dynamic charts, leverage toggles, and price feeds.",
-    "thumbnail": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=800&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=800&q=80"
-    ],
-    "demoUrl": "https://vortextrading.dev",
-    "githubUrl": "https://github",
-    "year": 2024,
-    "status": "Completed",
-    "category": "FinTech",
-    "stack": ["React", "TailwindCSS", "NodeJS", "Express"],
-    "featured": false,
-    "client": "Vortex Finance",
-    "duration": "3 Months",
-    "role": "Backend Engineer"
-  },
-  {
-    "id": "8",
-    "title": "Nebula - Obsidian Custom Theme",
-    "slug": "nebula-obsidian-theme",
-    "description": "Dark aesthetic theme designed specifically for Obsidian, focusing on readability, micro-animations, custom tags, and gradient folder structures.",
-    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-    ],
-    "demoUrl": "https://nebula.theme",
-    "githubUrl": "https://github",
-    "year": 2024,
-    "status": "Completed",
-    "category": "Theme Design",
-    "stack": ["TailwindCSS", "CSS"],
-    "featured": false,
-    "client": "Open Source",
-    "duration": "1 Month",
-    "role": "Designer"
-  },
-  {
-    "id": "9",
-    "title": "Chronos - Pomodoro Tracker App",
-    "slug": "chronos-tracker",
-    "description": "Minimalist study logger with custom ambient sound modules, retro futuristic font faces, task checklists, and dynamic calendar integrations.",
-    "thumbnail": "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=800&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1508962914676-134849a727f0?auto=format&fit=crop&w=800&q=80"
-    ],
-    "demoUrl": "https://chronostracker.dev",
-    "githubUrl": "https://github",
-    "year": 2023,
-    "status": "Completed",
-    "category": "Productivity App",
-    "stack": ["React", "TypeScript", "TailwindCSS"],
-    "featured": false,
-    "client": "Zen Labs",
-    "duration": "2 Months",
     "role": "Frontend Developer"
-  },
-  {
-    "id": "10",
-    "title": "Cyberpunk Portfolio v1",
-    "slug": "portfolio-v1",
-    "description": "My first digital space built using vanilla HTML/CSS, implementing unique retro layouts, grid designs, neon borders, and dynamic styling.",
-    "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-    "gallery": [
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
-    ],
-    "demoUrl": "https://ricky-v1.dev",
-    "githubUrl": "https://github",
-    "year": 2023,
-    "status": "Completed",
-    "category": "Web Application",
-    "stack": ["React", "CSS", "TailwindCSS"],
-    "featured": true,
-    "client": "Personal Project",
-    "duration": "1 Month",
-    "role": "Creator"
   }
 ]
