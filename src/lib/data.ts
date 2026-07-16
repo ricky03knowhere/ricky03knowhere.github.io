@@ -34,19 +34,19 @@ export function getTechStacks(): TechStack[] {
 }
 
 export function getExperience(): Experience[] {
-  return experienceData as Experience[];
+  return experienceData as unknown as Experience[];
 }
 
 export function getEducation(): Education[] {
-  return educationData as Education[];
+  return educationData as unknown as Education[];
 }
 
 export function getCertificates(): Certificate[] {
-  return certificatesData as Certificate[];
+  return certificatesData as unknown as Certificate[];
 }
 
 export function getInterests(): Interest[] {
-  return interestsData as Interest[];
+  return interestsData as unknown as Interest[];
 }
 
 export interface Settings {

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ExternalLink, Code2, ChevronLeft, ChevronRight, Calendar, Layers, SlidersHorizontal } from 'lucide-react';
+import { Search, ExternalLink, Code2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getProjects, getSettings } from '../lib/data';
 
 export default function Portfolio() {
