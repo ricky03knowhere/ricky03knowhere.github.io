@@ -14,4 +14,5 @@ export interface Profile {
   yearsExperience: number;
   totalProjects: number;
   totalCertificates: number;
+  happyClients: number;
 }

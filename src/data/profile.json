@@ -1,6 +1,6 @@
 {
   "name": "Ricky M Ridwan",
-  "nickname": "Ricky",
+  "nickname": "ricky",
   "profession": "Fullstack Web Developer",
   "headline": "Web Developer | Philosopher | Weebs",
   "about": "An informatics engineering who graduated in 2024, masters several programming languages, always follows technological developments, especially fullstack web programming, has developed several private company projects & made several web projects that have been uploaded to github.com. Open minded and passionate learning new things, always love & open to improve my knowledge and skills in web technologies.",
@@ -9,9 +9,10 @@
   "email": "ricky03senju@gmail.com",
   "phone": "+6285861874609",
   "whatsapp": "https://wa.me/6285861874609",
-  "resume": "/resume.pdf",
-  "quote": "Keep Coding, Stay awesome, No drama just learn.",
+  "resume": "/doc/CV_2026-07-17_RICKY_Muhammad Ridwan.pdf",
+  "quote": "Keep Coding, Stay Awesome, No Drama Just Learn.",
   "yearsExperience": 2,
-  "totalProjects": 30,
-  "totalCertificates": 10
+  "totalProjects": 15,
+  "totalCertificates": 10,
+  "happyClients": 7
 }

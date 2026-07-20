@@ -172,7 +172,7 @@ export default function Hero() {
             {/* Outer glow ring */}
             <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-accent-cyan/40 to-accent-purple/40 blur-xl animate-pulse" />
             {/* Glass border ring */}
-            <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full p-[4px] bg-gradient-to-br from-accent-cyan to-accent-purple shadow-[0_0_50px_rgba(34,211,238,0.25)]">
+            <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full shadow-[0_0_50px_rgba(34,211,238,0.25)]">
               <div className="w-full h-full rounded-full overflow-hidden glass">
                 <img
                   src={profile.avatar}
@@ -194,7 +194,7 @@ export default function Hero() {
 
         {/* Greeting */}
         <p className="hero-greeting text-accent-cyan text-base md:text-xl mb-4 font-semibold tracking-[0.2em] uppercase">
-          Hello, I'm
+          Hello 👋🏼, I'm
         </p>
 
         {/* Name */}

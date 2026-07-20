@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type SVGProps } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Mail, Phone, Globe, BookOpen } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { getProfile, getSocials } from '../lib/data';
 
 /* ─── Custom SVG Icons (lucide doesn't include brand icons) ─── */
@@ -33,6 +33,19 @@ const FacebookIcon: IconComponent = ({ size = 22, ...props }) => (
 const YoutubeIcon: IconComponent = ({ size = 22, ...props }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
+);
+
+const WhatsappIcon: IconComponent = ({ size = 22, ...props }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" fillRule="evenodd" clipRule="evenodd" {...props}>
+    <path d="M12.031 1.5C6.219 1.5 1.5 6.219 1.5 12.031c0 1.912.516 3.7 1.414 5.24L1.5 22.5l5.357-1.383a10.48 10.48 0 0 0 5.174 1.364C17.844 22.481 22.5 17.78 22.5 12.031 22.5 6.219 17.844 1.5 12.031 1.5Zm0 1.875a8.594 8.594 0 0 1 8.594 8.656c0 4.734-3.86 8.575-8.594 8.575a8.6 8.6 0 0 1-4.39-1.2l-.306-.183-3.178.833.85-3.1-.2-.317a8.522 8.522 0 0 1-1.37-4.608 8.594 8.594 0 0 1 8.594-8.656Z" />
+    <path d="M8.79 7.104c-.227-.504-.465-.514-.68-.523-.177-.008-.379-.007-.58-.007-.202 0-.53.076-.808.38-.277.304-1.059 1.034-1.059 2.522 0 1.488 1.084 2.926 1.235 3.128.15.202 2.094 3.344 5.166 4.555 2.554 1.006 3.074.806 3.628.755.555-.05 1.79-.731 2.042-1.438.253-.706.253-1.312.177-1.438-.075-.126-.277-.202-.58-.353-.302-.151-1.79-.883-2.068-.984-.278-.1-.48-.15-.681.152-.202.303-.78.983-.957 1.186-.176.202-.353.227-.655.076-.303-.151-1.277-.47-2.433-1.5-.9-.802-1.507-1.793-1.684-2.096-.176-.303-.019-.467.133-.617.136-.136.303-.353.454-.53.151-.177.202-.303.303-.505.1-.202.05-.38-.026-.53-.075-.151-.668-1.625-.933-2.219Z" />
+  </svg>
+);
+
+const BloggerIcon: IconComponent = ({ size = 22, ...props }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.025 0H22.05C23.1 0 24 .9 24 2.025v19.95C24 23.1 23.1 24 21.976 24zM12 3.975H9c-2.775 0-5.025 2.25-5.025 5.025v6c0 2.774 2.25 5.024 5.025 5.024h6c2.774 0 5.024-2.25 5.024-5.024v-3.975c0-.6-.45-1.05-1.05-1.05H18c-.524 0-.976-.45-.976-.976 0-2.776-2.25-5.026-5.024-5.026zm3.074 12H9c-.525 0-.975-.45-.975-.975s.45-.976.975-.976h6.074c.526 0 .977.45.977.976s-.45.976-.975.976zm-2.55-7.95c.527 0 .976.45.976.975s-.45.975-.975.975h-3.6c-.525 0-.976-.45-.976-.975s.45-.975.975-.975h3.6z" />
   </svg>
 );
 
@@ -79,9 +92,9 @@ export default function About() {
     { icon: LinkedinIcon as IconComponent, label: 'LinkedIn', href: socials.linkedin, color: '#8B5CF6' },
     { icon: InstagramIcon as IconComponent, label: 'Instagram', href: socials.instagram, color: '#22D3EE' },
     { icon: Mail as IconComponent, label: 'Email', href: socials.email, color: '#8B5CF6' },
-    { icon: Phone as IconComponent, label: 'WhatsApp', href: socials.whatsapp, color: '#22D3EE' },
-    { icon: Globe as IconComponent, label: 'Portfolio', href: socials.portfolio, color: '#8B5CF6' },
-    { icon: BookOpen as IconComponent, label: 'Blog', href: socials.blog, color: '#22D3EE' },
+    { icon: WhatsappIcon as IconComponent, label: 'WhatsApp', href: socials.whatsapp, color: '#22D3EE' },
+    // { icon: Globe as IconComponent, label: 'Portfolio', href: socials.portfolio, color: '#8B5CF6' },
+    { icon: BloggerIcon as IconComponent, label: 'Blog', href: socials.blog, color: '#22D3EE' },
     { icon: YoutubeIcon as IconComponent, label: 'YouTube', href: socials.youtube, color: '#8B5CF6' },
     { icon: FacebookIcon as IconComponent, label: 'Facebook', href: socials.facebook, color: '#22D3EE' },
   ].filter(l => l.href);
@@ -90,7 +103,7 @@ export default function About() {
     { value: profile.yearsExperience, suffix: '+', label: 'Years Experience' },
     { value: profile.totalProjects, suffix: '+', label: 'Projects' },
     { value: profile.totalCertificates, suffix: '+', label: 'Certificates' },
-    { value: 10, suffix: '+', label: 'Happy Clients' },
+    { value: profile.happyClients, suffix: '+', label: 'Happy Clients' },
   ];
 
   return (
@@ -129,7 +142,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-10 leading-tight tracking-tight text-white"
             >
-              About <span className="gradient-text">Me</span>
+              Who am <span className="gradient-text">I</span>
             </motion.h2>
 
             <motion.div
@@ -140,7 +153,7 @@ export default function About() {
               className="space-y-6 text-light-text/90"
             >
               {profile.about.split('\n').map((paragraph, index) => (
-                <p key={index} className="leading-relaxed text-base md:text-lg font-light">
+                <p key={index} className="leading-relaxed text-base md:text-lg font-light text-justify">
                   {paragraph}
                 </p>
               ))}
@@ -187,41 +200,41 @@ export default function About() {
               </div>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={{
-                hidden: {},
-                show: {
-                  transition: {
-                    staggerChildren: 0.1
-                  }
-                }
-              }}
-              className="about-stats-container"
-            >
-              <div className="grid grid-cols-2 gap-6">
-                {stats.map((stat) => (
-                  <motion.div
-                    key={stat.label}
-                    variants={{
-                      hidden: { opacity: 0, y: 30 },
-                      show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-                    }}
-                    className="about-stat rounded-2xl p-6 text-center transition-all duration-300 border border-white/10 bg-white/[0.02] backdrop-blur-md hover:border-accent-cyan/30 hover:bg-white/[0.05] hover:shadow-[0_0_35px_rgba(34,211,238,0.1)]"
-                  >
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                    <p className="text-light-text/75 text-xs md:text-sm mt-3 font-semibold uppercase tracking-wider">
-                      {stat.label}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
           </div>
         </div>
+        {/* Stats */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
+          className="about-stats-container"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {stats.map((stat) => (
+              <motion.div
+                key={stat.label}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
+                className="about-stat rounded-2xl p-6 text-center transition-all duration-300 border border-white/10 bg-white/[0.02] backdrop-blur-md hover:border-accent-cyan/30 hover:bg-white/[0.05] hover:shadow-[0_0_35px_rgba(34,211,238,0.1)]"
+              >
+                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                <p className="text-light-text/75 text-xs md:text-sm mt-3 font-semibold uppercase tracking-wider">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Section Divider */}
         <div className="mt-28 flex justify-center">

@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 .gemini/*
+dist
 dist-ssr
 *.local
 

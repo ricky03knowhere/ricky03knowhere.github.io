@@ -88,16 +88,16 @@ export default function Navbar() {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-cyan to-accent-purple flex items-center justify-center text-base font-bold font-heading transition-transform duration-300 group-hover:scale-110">
+            {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-cyan to-accent-purple flex items-center justify-center text-base font-bold font-heading transition-transform duration-300 group-hover:scale-110">
               {profile.nickname.charAt(0)}
-            </div>
+            </div> */}
             <span
               className={`
                 font-heading font-bold transition-all duration-500 tracking-tight
                 ${scrolled ? 'text-base' : 'text-lg'}
               `}
             >
-              <span className="gradient-text">{profile.nickname}</span>
+              <span className="gradient-text">{`\${ ${profile.nickname} }`}</span>
             </span>
           </a>
 
@@ -138,7 +138,7 @@ export default function Navbar() {
                 hidden sm:flex items-center gap-2
                 btn-gradient rounded-full font-bold
                 transition-all duration-500
-                ${scrolled ? 'px-5 py-2 text-xs' : 'px-7 py-3 text-sm'}
+                ${scrolled ? 'px-3 py-2 text-[.7em]' : 'px-7 py-3 text-sm'}
               `}
             >
               <span className="flex items-center gap-2">
