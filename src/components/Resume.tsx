@@ -32,22 +32,56 @@ function EducationTimeline({ items }: { items: Education[] }) {
           className="relative mb-10 last:mb-0"
         >
           {/* Dot */}
-          <div className="absolute -left-5 md:-left-7 top-1 w-4 h-4 rounded-full bg-accent-cyan shadow-[0_0_12px_rgba(34,211,238,0.5)] border-2 border-primary" />
+          <div className="absolute -left-5 md:-left-7 top-1.5 w-3 h-3 rounded-full bg-accent-cyan shadow-[0_0_12px_rgba(34,211,238,0.5)]" />
 
           <div className="glass-card p-6 rounded-2xl hover:border-accent-cyan/30 transition-all duration-300">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
-              <h3 className="text-lg font-bold text-white font-heading">{edu.school}</h3>
-              <span className="flex items-center gap-1.5 text-xs text-accent-cyan font-medium">
-                <Calendar className="w-3.5 h-3.5" />
-                {edu.startYear} — {edu.endYear}
-              </span>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+              {/* Logo */}
+              {edu.logo ? (
+                <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 overflow-hidden backdrop-blur-md shadow-md">
+                  <img
+                    src={edu.logo}
+                    alt={edu.school}
+                    className={"w-full h-full object-cover" + (i === 0 ? " object-top" : "")}
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+              ) : (
+                <div className="w-16 h-16 rounded-full bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center shrink-0 text-accent-cyan">
+                  <GraduationCap className="w-7 h-7" />
+                </div>
+              )}
+
+              {/* Title & Info */}
+              <div className="flex-1 w-full">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1.5 mb-1">
+                  <h3 className="text-lg font-bold text-white font-heading">{edu.school}</h3>
+                  <span className="flex items-center gap-1.5 text-xs text-accent-cyan font-medium shrink-0">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {edu.startYear} — {edu.endYear}
+                  </span>
+                </div>
+
+                {/* Address */}
+                {edu.address && (
+                  <p className="flex items-center gap-1.5 text-xs text-light-text/60 font-light">
+                    <MapPin className="w-3.5 h-3.5 text-accent-cyan/70 shrink-0" />
+                    <span>{edu.address}</span>
+                  </p>
+                )}
+              </div>
             </div>
-            <p className="text-light-text text-sm mb-1">{edu.degree} — {edu.major}</p>
-            {edu.gpa && (
-              <span className="inline-block mt-2 px-3 py-1 text-xs font-semibold rounded-full bg-accent-purple/10 text-accent-purple border border-accent-purple/20">
-                IPK {edu.gpa}
-              </span>
-            )}
+
+            <div className="pt-2 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <p className="text-light-text text-sm font-medium">{edu.degree} — {edu.major}</p>
+              {edu.gpa && (
+                <span className="inline-self-start sm:inline-self-auto px-3 py-1 text-xs font-semibold rounded-full bg-accent-purple/10 text-accent-purple border border-accent-purple/20">
+                  IPK {edu.gpa}
+                </span>
+              )}
+            </div>
           </div>
         </motion.div>
       ))}
@@ -87,7 +121,7 @@ function ExperienceTimeline({ items }: { items: Experience[] }) {
           transition={{ delay: i * 0.15, duration: 0.5 }}
           className="relative mb-10 last:mb-0"
         >
-          <div className="absolute -left-5 md:-left-7 top-1 w-4 h-4 rounded-full border-2 border-primary shadow-[0_0_12px_rgba(139,92,246,0.5)]"
+          <div className="absolute -left-5 md:-left-7 top-1 w-3 h-3 rounded-full shadow-[0_0_12px_rgba(139,92,246,0.5)]"
             style={{ backgroundColor: exp.isCurrent ? '#8B5CF6' : '#22D3EE' }}
           />
 
@@ -140,35 +174,69 @@ function ExperienceTimeline({ items }: { items: Experience[] }) {
 }
 
 /* ── Certificate Gallery (Masonry) ── */
+const CERT_PREVIEW_COUNT = 5;
+
 function CertificateGallery({ items }: { items: Certificate[] }) {
   const [selected, setSelected] = useState<Certificate | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const hasMore = items.length > CERT_PREVIEW_COUNT;
+  const visibleItems = showAll ? items : items.slice(0, CERT_PREVIEW_COUNT);
+  const remainingCount = items.length - CERT_PREVIEW_COUNT;
 
   return (
     <>
       {/* Masonry grid */}
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-0">
-        {items.map((cert, i) => (
-          <motion.div
-            key={cert.id}
+        <AnimatePresence mode="popLayout">
+          {visibleItems.map((cert, i) => (
+            <motion.div
+              key={cert.id}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
+              className="relative break-inside-avoid cursor-pointer group overflow-hidden"
+              onClick={() => setSelected(cert)}
+            >
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="w-full block transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              {/* Overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                <h4 className="text-white font-bold text-sm font-heading">{cert.title}</h4>
+                <p className="text-accent-cyan text-xs">{cert.issuer} · {cert.year}</p>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+
+        {/* Show All / Show Less card */}
+        {hasMore && (
+          <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.1, duration: 0.4 }}
-            className="relative break-inside-avoid cursor-pointer group overflow-hidden"
-            onClick={() => setSelected(cert)}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            onClick={() => setShowAll((prev) => !prev)}
+            className="break-inside-avoid w-full aspect-video flex flex-col items-center justify-center gap-3 cursor-pointer group glass-card rounded-none transition-all duration-300 hover:border-accent-cyan/30"
+            style={{ display: showAll ? 'none' : 'flex' }}
           >
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="w-full block transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
-            />
-            {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <h4 className="text-white font-bold text-sm font-heading">{cert.title}</h4>
-              <p className="text-accent-cyan text-xs">{cert.issuer} · {cert.year}</p>
+            <div className="w-14 h-14 rounded-full bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center group-hover:bg-accent-cyan/20 group-hover:scale-110 transition-all duration-300">
+              <Award className="w-6 h-6 text-accent-cyan" />
             </div>
-          </motion.div>
-        ))}
+            <span className="text-sm font-semibold text-white group-hover:text-accent-cyan transition-colors">
+              {showAll ? 'Show Less' : `Show All`}
+            </span>
+            {!showAll && (
+              <span className="text-xs text-light-text/50">
+                +{remainingCount} more certificate{remainingCount > 1 ? 's' : ''}
+              </span>
+            )}
+          </motion.button>
+        )}
       </div>
 
       {/* Fullscreen modal */}

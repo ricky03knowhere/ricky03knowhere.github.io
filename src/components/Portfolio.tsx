@@ -185,7 +185,7 @@ export default function Portfolio() {
                     // Prevent navigation if user is clicking on demo/repo links directly
                     const target = e.target as HTMLElement;
                     if (target.closest('a')) return;
-                    window.open(project.demoUrl, '_blank', 'noopener,noreferrer');
+                    window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
                   }}
                   className="group relative rounded-[20px] overflow-hidden glass hover:border-accent-cyan/30 transition-all duration-500 flex flex-col h-full hover:-translate-y-2 cursor-pointer hover:shadow-[0_15px_40px_rgba(34,211,238,0.08)]"
                   style={{
@@ -207,12 +207,12 @@ export default function Portfolio() {
                     
                     {/* Category & Year badges */}
                     <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-3 py-1 text-[10px] uppercase font-bold tracking-widest bg-primary/80 backdrop-blur-md rounded-full text-accent-cyan border border-accent-cyan/30">
+                      <span className="px-3 py-1 text-[10px] uppercase font-bold tracking-widest bg-accent-cyan/20 border border-accent-cyan/40 backdrop-blur-xl rounded-full text-accent-cyan shadow-lg shadow-black/20 opacity-90">
                         {project.category}
                       </span>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <span className="px-3 py-1 text-[10px] font-bold bg-primary/80 backdrop-blur-md rounded-full text-light-text border border-glass-border">
+                      <span className="px-3 py-1 text-[10px] font-bold bg-white/10 backdrop-blur-xl rounded-full text-white/80 border border-white/20 shadow-lg shadow-black/20 opacity-75">
                         {project.year}
                       </span>
                     </div>
