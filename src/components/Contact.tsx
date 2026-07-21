@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface FormData {
   name: string;
   email: string;
-  instagram: string;
+  ig: string;
   message: string;
 }
 
@@ -20,7 +20,7 @@ export default function Contact() {
   const profile = getProfile();
   const socials = getSocials();
 
-  const [form, setForm] = useState<FormData>({ name: '', email: '', instagram: '', message: '' });
+  const [form, setForm] = useState<FormData>({ name: '', email: '', ig: '', message: '' });
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const sectionRef = useRef<HTMLElement>(null);
@@ -47,28 +47,25 @@ export default function Contact() {
     return Object.keys(errs).length === 0;
   }
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!validate()) return;
 
     setStatus('loading');
+
     try {
       // Google Apps Script endpoint (placeholder)
       // Replace with actual deployed web app URL
-      const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
-
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwfwcj4ep9omeWXCCqmnerWfMyCjv-ygH7WudXak4wygYRsIau9UESn9zRJ5BkW5psE/exec';
+      
       await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          timestamp: new Date().toISOString(),
-        }),
+        body: new FormData(e.currentTarget),
       });
 
       setStatus('success');
-      setForm({ name: '', email: '', instagram: '', message: '' });
+      setForm({ name: '', email: '', ig: '', message: '' });
       setTimeout(() => setStatus('idle'), 4000);
     } catch {
       setStatus('error');
@@ -164,11 +161,12 @@ export default function Contact() {
 
           {/* Right — Glass Form */}
           <div className="contact-animate">
-            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-3xl space-y-5">
+            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-3xl space-y-5" name='form-submit'>
               <div>
                 <label htmlFor="contact-name" className="block text-xs text-light-text/60 mb-1.5 font-medium">Name *</label>
                 <input
                   id="contact-name"
+                  name="name"
                   type="text"
                   placeholder="Your name"
                   value={form.name}
@@ -182,6 +180,7 @@ export default function Contact() {
                 <label htmlFor="contact-email" className="block text-xs text-light-text/60 mb-1.5 font-medium">Email *</label>
                 <input
                   id="contact-email"
+                  name="email"
                   type="email"
                   placeholder="your@email.com"
                   value={form.email}
@@ -195,11 +194,12 @@ export default function Contact() {
                 <label htmlFor="contact-instagram" className="block text-xs text-light-text/60 mb-1.5 font-medium">Instagram</label>
                 <input
                   id="contact-instagram"
+                  name="ig"
                   type="text"
                   placeholder="@username"
-                  value={form.instagram}
-                  onChange={e => setForm(p => ({ ...p, instagram: e.target.value }))}
-                  className={inputClass('instagram')}
+                  value={form.ig}
+                  onChange={e => setForm(p => ({ ...p, ig: e.target.value }))}
+                  className={inputClass('ig')}
                 />
               </div>
 
@@ -207,6 +207,7 @@ export default function Contact() {
                 <label htmlFor="contact-message" className="block text-xs text-light-text/60 mb-1.5 font-medium">Message *</label>
                 <textarea
                   id="contact-message"
+                  name="message"
                   rows={5}
                   placeholder="Tell me about your project or just say hello..."
                   value={form.message}
