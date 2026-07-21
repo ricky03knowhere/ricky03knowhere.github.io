@@ -67,7 +67,7 @@ export default function Navbar() {
           fixed top-6 left-1/2 -translate-x-1/2 z-50
           transition-all duration-500 ease-out
           ${scrolled
-            ? 'w-[90%] max-w-[850px] py-2 px-4'
+            ? 'w-[90%] max-w-[920px] py-2 px-4'
             : 'w-[95%] max-w-[1280px] py-4 px-6'
           }
         `}
@@ -76,7 +76,7 @@ export default function Navbar() {
           className={`
             glass rounded-full flex items-center justify-between
             transition-all duration-500
-            ${scrolled ? 'px-6 py-2.5 shadow-[0_10px_30px_rgba(8,18,32,0.5)]' : 'px-10 py-4'}
+            ${scrolled ? 'px-6 py-2.5 shadow-[0_10px_30px_rgba(8,18,32,0.5)]' : 'px-6 py-3'}
           `}
         >
           {/* Logo */}
@@ -97,7 +97,7 @@ export default function Navbar() {
                 ${scrolled ? 'text-base' : 'text-lg'}
               `}
             >
-              <span className="gradient-text">{`\${ ${profile.nickname} }`}</span>
+              <span className="gradient-text text-xl">{`\${ ${profile.nickname} }`}</span>
             </span>
           </a>
 

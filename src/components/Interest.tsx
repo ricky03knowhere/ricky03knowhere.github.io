@@ -20,19 +20,24 @@ function GalaxyNode({
   containerSize: { w: number; h: number };
 }) {
   const nodeRef = useRef<HTMLButtonElement>(null);
-  const baseSize = 70 + (interest.title.length > 8 ? 0 : 20);
+  const baseSize = 90 + (interest.title.length < 8 ? 0 : 20);
 
   // Arrange in organic spiral layout
   useEffect(() => {
     if (!nodeRef.current || containerSize.w === 0) return;
 
     const angle = (index / total) * Math.PI * 2 * 1.618;
-    const radius = 80 + index * 22;
+    const maxRadius = Math.min(containerSize.w, containerSize.h) * 0.5;
+    const radius = maxRadius * 0.2 + (index / total) * maxRadius * 0.8;
     const cx = containerSize.w / 2;
     const cy = containerSize.h / 2;
 
-    const x = cx + Math.cos(angle) * radius - baseSize / 2;
-    const y = cy + Math.sin(angle) * radius - baseSize / 2;
+    // Clamp nodes within container bounds
+    const rawX = cx + Math.cos(angle) * radius - baseSize / 2;
+    const rawY = cy + Math.sin(angle) * radius - baseSize / 2;
+    const padding = 10;
+    const x = Math.max(padding, Math.min(rawX, containerSize.w - baseSize - padding));
+    const y = Math.max(padding, Math.min(rawY, containerSize.h - baseSize - padding));
 
     gsap.set(nodeRef.current, { x, y });
 
@@ -79,7 +84,7 @@ function GalaxyNode({
       ref={nodeRef}
       onMouseMove={handleMouseMove}
       onClick={() => onSelect(interest)}
-      className="absolute group cursor-pointer"
+      className="absolute group cursor-pointer scale-70 md:scale-80 lg:scale-100"
       style={{ width: baseSize, height: baseSize }}
     >
       <div
@@ -150,11 +155,11 @@ export default function Interest() {
         </div>
 
         {/* Galaxy Container */}
-        <div className="flex flex-col lg:flex-row gap-6 items-stretch" style={{ minHeight: '500px' }}>
+        <div>
           {/* Galaxy */}
           <div
             ref={containerRef}
-            className="interest-animate relative flex-1 min-h-[450px] lg:min-h-[550px] rounded-3xl border border-glass-border overflow-hidden"
+            className="interest-animate relative min-h-[450px] lg:min-h-[700px] rounded-3xl border border-glass-border overflow-hidden"
             style={{ background: 'radial-gradient(ellipse at center, rgba(14,28,47,0.8) 0%, rgba(8,18,32,0.95) 70%)' }}
           >
             {/* Ambient star particles */}
@@ -185,53 +190,57 @@ export default function Interest() {
               />
             ))}
           </div>
+        </div>
 
-          {/* Detail Panel */}
-          <AnimatePresence mode="wait">
-            {selected && (
+        {/* Modal Popup */}
+        <AnimatePresence mode="wait">
+          {selected && (
+            <motion.div
+              key={selected.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+              onClick={() => setSelected(null)}
+            >
               <motion.div
-                key={selected.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/50 backdrop-blur-xl lg:relative lg:inset-auto lg:z-0 lg:p-0 lg:bg-transparent lg:backdrop-blur-none lg:w-[360px] shrink-0"
-                onClick={() => setSelected(null)}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="glass-card rounded-3xl overflow-hidden max-w-md w-full flex flex-col border border-white/10 shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
               >
-                <div
-                  className="glass-card rounded-3xl overflow-hidden max-w-md w-full lg:h-full flex flex-col border border-white/10"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {/* Image */}
-                  <div className="relative h-48 lg:h-56 overflow-hidden">
-                    <img
-                      src={selected.image}
-                      alt={selected.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent" />
-                    <button
-                      onClick={() => setSelected(null)}
-                      className="absolute top-3 right-3 w-8 h-8 rounded-full backdrop-blur-md bg-white/10 border border-white/10 flex items-center justify-center text-white hover:text-accent-cyan transition-colors cursor-pointer"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
+                {/* Image */}
+                <div className="relative h-52 overflow-hidden">
+                  <img
+                    src={selected.image}
+                    alt={selected.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent" />
+                  <button
+                    onClick={() => setSelected(null)}
+                    className="absolute top-3 right-3 w-8 h-8 rounded-full backdrop-blur-md bg-white/10 border border-white/10 flex items-center justify-center text-white hover:text-accent-cyan transition-colors cursor-pointer"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
 
-                  {/* Content */}
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-2xl font-bold text-white font-heading mb-3">
-                      {selected.title}
-                    </h3>
-                    <p className="text-light-text/75 text-sm leading-relaxed flex-1 font-light">
-                      {selected.description}
-                    </p>
-                  </div>
+                {/* Content */}
+                <div className="p-6 flex flex-col">
+                  <h3 className="text-2xl font-bold text-white font-heading mb-3">
+                    {selected.title}
+                  </h3>
+                  <p className="text-light-text/75 text-sm leading-relaxed font-light">
+                    {selected.description}
+                  </p>
                 </div>
               </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

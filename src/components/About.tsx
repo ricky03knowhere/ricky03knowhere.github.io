@@ -132,7 +132,7 @@ export default function About() {
         </motion.div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-10">
           {/* Left — About Text */}
           <div>
             <motion.h2
@@ -142,7 +142,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-10 leading-tight tracking-tight text-white"
             >
-              Who am <span className="gradient-text">I</span>
+              <span className="gradient-text">Who</span> am I
             </motion.h2>
 
             <motion.div
@@ -170,9 +170,9 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mb-14"
             >
-              <h3 className="text-xs font-semibold text-accent-cyan/80 tracking-widest uppercase mb-6">
+              <span className="text-sm font-semibold text-accent-cyan/80 tracking-widest uppercase mb-6 inline-block">
                 Connect with me
-              </h3>
+              </span>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
                 {socialLinks.map((social) => (
