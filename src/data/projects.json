@@ -1,9 +1,9 @@
 [
   {
     "id": "1",
-    "title": "Sistem Rekomendasi Musik dengan Deteksi Genre & Emosi Pengguna",
+    "title": "Music Genre and User Emotion Detection-Based Music Recommendation System",
     "slug": "sistem-rekomendasi-musik-deteksi-genre-emosi",
-    "description": "Website rekomendasi musik berbasis AI yang mampu mendeteksi genre musik menggunakan CNN serta emosi pengguna menggunakan MediaPipe dan ANN untuk memberikan rekomendasi lagu yang lebih personal. Merupakan project Tugas Akhir (Skripsi).",
+    "description": "AI-based music recommendation website that can detect music genres using CNN and user emotions using MediaPipe and ANN to provide more personalized song recommendations. This is a final project (thesis).",
     "thumbnail": "/img/projects/genre.png",
     "gallery": [
       "/projects/genre.png"
@@ -29,9 +29,33 @@
   },
   {
     "id": "2",
-    "title": "Manpro - Sistem Informasi Konstruksi Pembangunan Al-Azhar",
+    "title": "SmileCat - Web Tools Collection",
+    "slug": "smilecat-web-tools-collection",
+    "description": "Web tools collection for productivity, learning, editing & others",
+    "thumbnail": "/img/projects/smilecat.png",
+    "gallery": [
+      "/projects/smilecat.png"
+    ],
+    "demoUrl": "https://smile-cat.vercel.app/",
+    "githubUrl": "https://github.com/ricky03knowhere/smile_cat",
+    "year": 2024,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "Vue.js",
+      "CSS3",
+      "Tailwind CSS"
+    ],
+    "featured": true,
+    "client": "UIN Sunan Gunung Djati Bandung",
+    "duration": "5 Months",
+    "role": "AI & Fullstack Developer"
+  },
+  {
+    "id": "3",
+    "title": "Manpro - Construction Information System for Al-Azhar Development",
     "slug": "manpro-sistem-informasi-konstruksi-al-azhar",
-    "description": "Sistem informasi yang digunakan untuk mengelola proyek konstruksi pembangunan pada instansi PT. Al-Azhar Bandung, mulai dari monitoring progres proyek hingga pengelolaan data proyek.",
+    "description": "An information system used to manage construction projects at PT. Al-Azhar Bandung, from monitoring project progress to managing project data.",
     "thumbnail": "/img/projects/manpro.png",
     "gallery": [
       "/projects/manpro/1.png"
@@ -53,10 +77,10 @@
     "role": "Backend Developer"
   },
   {
-    "id": "3",
-    "title": "Alcovision - Sistem Informasi Smart CCTV dalam Bus",
+    "id": "4",
+    "title": "Alcovision - Smart CCTV System in Bus",
     "slug": "alcovision-smart-cctv-bus",
-    "description": "Sistem Smart CCTV berbasis AI yang mampu memonitor kondisi di dalam bus seperti deteksi distraksi sopir, identifikasi wajah sopir, perhitungan jumlah penumpang, dan berbagai analisis visual lainnya. Project Kerja Praktik (Magang).",
+    "description": "AI-based Smart CCTV system capable of monitoring conditions inside the bus, such as driver distraction detection, driver facial identification, passenger counts, and various other visual analytics. Practical Work Project (Internship).",
     "thumbnail": "/img/projects/alcovision.png",
     "gallery": [
       "/projects/alcovision/1.png"
@@ -80,10 +104,10 @@
     "role": "AI & Fullstack Developer"
   },
   {
-    "id": "4",
-    "title": "Pesantren Habiburrahman - Sistem Informasi & Pengelolaan Data",
+    "id": "5",
+    "title": "Pesantren Habiburrahman - Information & Data Management System",
     "slug": "pesantren-habiburrahman",
-    "description": "Website sistem informasi dan pengelolaan data pesantren yang dikembangkan sebagai project akhir mata kuliah Pengembangan Aplikasi Web menggunakan React.js dan Bootstrap 5.",
+    "description": "Information and data management system website for Islamic boarding schools developed as the final project for the Web Application Development course using React.js and Bootstrap 5.",
     "thumbnail": "/img/projects/pesantren.png",
     "gallery": [
       "/projects/pesantren/1.png"
@@ -106,10 +130,10 @@
     "role": "Fullstack Developer"
   },
   {
-    "id": "5",
+    "id": "6",
     "title": "Xhyre - NFT Marketplace",
     "slug": "xhyre-nft-marketplace",
-    "description": "Website marketplace NFT berbasis teknologi Web3 dan Blockchain yang mendukung transaksi cryptocurrency untuk jual beli aset digital.",
+    "description": "NFT marketplace website based on Web3 and Blockchain technology that supports cryptocurrency transactions for trading digital assets.",
     "thumbnail": "/img/projects/xhyre.png",
     "gallery": [
       "/projects/xhyre/1.png"
@@ -121,12 +145,170 @@
     "category": "Web3 Application",
     "stack": [
       "React.js",
+      "Next.js",
+      "Ethers.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Smart Contract",
       "Blockchain",
       "Web3.js"
     ],
     "featured": false,
     "client": "Ewacomm",
     "duration": "5 Months",
+    "role": "Frontend Developer"
+  },
+  {
+    "id": "7",
+    "title": "Situ Bagendit Ticket Booking System",
+    "slug": "situ-bagendit-ticket-booking-system",
+    "description": "Final project as well as the final semester exam (UAS) for the Database course in lecture semester 4, created with Node.js ,Express.js withTemplate layout using EJS & Bootstrap5. Ticket booking system website for tourism objects in Garut, West Java, specifically Situ Bagendit.",
+    "thumbnail": "/img/projects/bagendit.png",
+    "gallery": [
+      "/projects/bagendit/1.png"
+    ],
+    "demoUrl": "",
+    "githubUrl": "https://github.com/ricky03knowhere/bagendit_ticket_order",
+    "year": 2022,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "Node.js",
+      "Express.js",
+      "EJS",
+      "Bootstrap 5",
+      "PostgreSQL"
+    ],
+    "featured": false,
+    "client": "UIN Sunan Gunung Djati Bandung",
+    "duration": "2 Months",
+    "role": "Fullstack Developer"
+  },
+  {
+    "id": "8",
+    "title": "Comic Store - Web Development Assignment",
+    "slug": "book-store-web-development-assignment",
+    "description": "Final project as well as the final semester exam (UAS) Algorithms & programming courses in lectures semester 2, created with Laravel 8 and Template from Argon Admin Dashboard.",
+    "thumbnail": "/img/projects/comic-store.jpg",
+    "gallery": [
+      "/projects/comic-store/1.png"
+    ],
+    "demoUrl": "",
+    "githubUrl": "https://github.com/ricky03knowhere/comic_store",
+    "year": 2021,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "Laravel 8",
+      "MySQL",
+      "Argon Admin Dashboard",
+      "Bootstrap 5"
+    ],
+    "featured": false,
+    "client": "UIN Sunan Gunung Djati Bandung",
+    "duration": "3 Months",
+    "role": "Fullstack Developer"
+  },
+  {
+    "id": "9",
+    "title": "Shanika Sofa Service - Landing Page",
+    "slug": "shanika-sofa-service-landing-page",
+    "description": "Profile website of a sofa service company located in Jakarta. Created with Bootstrap Templates 5 with additional theme customization.",
+    "thumbnail": "/img/projects/shanika.png",
+    "gallery": [
+      "/projects/shanika/1.png"
+    ],
+    "demoUrl": "https://shanika.netlify.app/",
+    "githubUrl": "https://github.com/ricky03knowhere/sofa_sevice",
+    "year": 2021,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap 5"
+    ],
+    "featured": false,
+    "client": "Self",
+    "duration": "1 Month",
+    "role": "Frontend Developer"
+  },
+  {
+    "id": "10",
+    "title": "SPP Payment - School Final Assignment",
+    "slug": "spp-payment-landing-page",
+    "description": "SPP payment website for school purposes. Created as the Final Assignment using Dreamweaver & Bootstrap 5 customisation.",
+    "thumbnail": "/img/projects/spp.png",
+    "gallery": [
+      "/projects/spp/1.png"
+    ],
+    "demoUrl": "https://ricky03knowhere.github.io/spp_payment/",
+    "githubUrl": "https://github.com/ricky03knowhere/spp_payment",
+    "year": 2020,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap 5",
+      "Dreamweaver"
+    ],
+    "featured": false,
+    "client": "Self",
+    "duration": "1 Month",
+    "role": "Frontend Developer"
+  },
+  {
+    "id": "11",
+    "title": "Song Lyric - Self Project",
+    "slug": "song-lyric-self-project",
+    "description": "Self Learning project using data array concept in Javascript and is made with Jquery and Bootstrap 4 Template",
+    "thumbnail": "/img/projects/lyric.png",
+    "gallery": [
+      "/projects/lyric/1.png"
+    ],
+    "demoUrl": "https://ricky03knowhere.github.io/song_lyrics/",
+    "githubUrl": "https://github.com/ricky03knowhere/song_lyrics",
+    "year": 2019,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap 4",
+      "Jquery"
+    ],
+    "featured": false,
+    "client": "Self",
+    "duration": "1 Month",
+    "role": "Frontend Developer"
+  },
+  {
+    "id": "12",
+    "title": "PlayScript - Self Project",
+    "slug": "playscript-self-project",
+    "description": "A collection of simple games made with JavaScript, It's the documentation of my JavaScript learning",
+    "thumbnail": "/img/projects/playscript.png",
+    "gallery": [
+      "/projects/playscript/1.png"
+    ],
+    "demoUrl": "https://ricky03knowhere.github.io/playscript/",
+    "githubUrl": "https://github.com/ricky03knowhere/playscript",
+    "year": 2018,
+    "status": "Completed",
+    "category": "Web Application",
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap 5"
+    ],
+    "featured": false,
+    "client": "Self",
+    "duration": "1 Month",
     "role": "Frontend Developer"
   }
 ]

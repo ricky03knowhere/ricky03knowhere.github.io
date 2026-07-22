@@ -223,7 +223,7 @@ export default function Portfolio() {
                     <h3 className="text-xl font-bold mb-3 group-hover:text-accent-cyan transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-light-text/70 text-sm font-light leading-relaxed mb-6 flex-grow">
+                    <p className="text-light-text/70 text-sm font-light leading-relaxed mb-6 flex-grow text-justify">
                       {project.description}
                     </p>
 
